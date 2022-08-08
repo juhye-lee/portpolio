@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무인기관리자</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<script type='text/javascript' src="jquery/jquery.js">
+     
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('.nav-button').click(function(){
+		if( $('#left').is(":visible") ){
+
+			$('#left').hide();
+
+		}else{
+
+			$('#left').show();
+
+		}
+		
+		
+	});
+
+	$('.subMenu').hide();
+	 
+	$("#myPage").click(function(){
+		var status=$('.subMenu').css("display");	
+		if(status == "none") {
+			$(this).attr('class','subicon_up');
+		} else {			
+			$(this).attr('class','subicon_down');
+		}
+		$('.subMenu').slideToggle("fast");
+	});
+
+	$("#info").click(function(){
+		$('.subMenu').slideUp("fast");
+		$(".subicon_up").attr('class','subicon_down');
+	});
+
+});
+
+</script>
+</head>
+<body >
+<!-- 내용 바로가기 -->
+    <div id="skipnavigation"> <a href="">본문으로 바로가기</a> <a href="">메뉴로 바로가기</a> </div>
+    <div class="main_bg mb40">
+        <div id="top">
+          <div class="topCenter ">
+            <a class="nav-button">
+                <img alt="모바일로고" src="img/menu/mobile_menu.png">
+            </a>
+            <h1 class="logo">
+            <a href="#">
+                <img alt="농진청로고" src="img/sub/logo.png"></a>
+            </h1>
+            <div class="logInfo">
+                  <button class="btnlogout ml10">로그인</button>
+            </div>
+          </div>
+        </div>
+        <!--//TOP 영역--> 
+        <!--CONTAINER 영역-->
+        <div class="main_wrap">
+           <div id="left" style="display:none!important;">
+            
+             <!-- 로그인 후 왼쪽메뉴-->
+               <div class="lnbWrap">
+                    <div class="mobile_info">
+                        <ul>
+                        <li>홍길동</li>
+                        <li><a href="#">로그아웃</a></li>
+                        <li><a href="#">관리자페이지</a></li>
+                        <li><a href="#">영상데이터전송</a></li>
+                        </ul>
+
+                    </div>
+                   <div class="lnbTitle">
+                       <div class="align">
+                           <p class="fs32 txt-500 txt_in30">무인기촬영</p>
+                           <p class="fs32 txt-300 txt_in30 mt10">
+                               정보관리
+                           </p>
+                       </div>
+                   </div>
+                   <ul>
+                       <li class="on"><a href="#">무인기촬영 정보</a></li>
+                       <li><a href="#">공간정보 서비스</a></li>
+                       <li><a href="#" id="info">정보공유</a></li>
+                       <li><a href="#" id="myPage" class="subicon_down">마이페이지</a>
+                           <ul class="subMenu" id="sub">
+                              <li><a href="#">나의 정보확인/수정</a></li>
+                              <li><a href="#">영상 요청 현황</a></li>
+                           </ul>
+
+                       </li>
+                   </ul>
+                </div>
+                <!-- //로그인 후 왼쪽메뉴-->
+                </div>
+                
+            <div class="main_title">
+                <h2>무인기촬영 정보 관리</h2>
+                <ul class="main_menu">
+                    <li><a href="#">무인기 촬영 정보</a></li>
+                    <li><a href="#">공간정보 서비스</a></li>
+                    <li><a href="#">정보공유</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+            <div class="txt-right">
+                <button class="mainbtnA">영상데이터 전송</button>
+            </div>
+            
+            <div class="main_col mt10">
+                <div>
+
+                    <h3> 공간정보 서비스</h3>
+                    <p class="mainex">정확하고 상세한 지도를 기반으로 종합검색 서비스를 제공한다.
+                    </p>
+                    <button class="mainbtnB ml30 mt20">서비스 보러가기</button>
+                    
+                </div>    
+                <div>
+                   
+                   <h3>무인기 촬영정보</h3>
+                   <p class="mainex">무인기를 통하여 촬영한 작업을 생성된 RAW영상데이터에 대한 정보를 볼 수 있습니다.
+                   </p>
+                    <button class="mainbtnB ml30 mt20">촬영 달려보기</button>
+                    <button class="mainbtnB mobilebtn">촬영 영상등록</button>
+                    
+               </div>
+               <div>
+                   <div class="notice">
+                      
+                       <h3 class="fl">정보공유</h3>
+                       <a class="fr mt25 pr30" href="#"><img alt="더보기버튼" src="img/main/more.png"/></a>
+                       <ul class="notice_list">
+                           <li><a href="#">관리시스템 오픈했습니다.<span>17.11.11</span></a></li>
+                           <li><a href="#">관리시스템 오픈했습니다.<span>17.11.11</span></a></li>
+                            <li><a href="#">관리시스템 오픈했습니다.<span>17.11.11</span></a></li>
+                       </ul>
+                       
+                   </div>
+                  <div class="mypage">
+                       <h3>마이페이지</h3>
+                       <div class="mypage_con">
+                           <div class="myinfo"><img class="" alt="내정보확인" src="img/main/mypage01.png"/>
+                               <button class="mainbtnB mt10">정보확인</button>
+                           </div>
+                           <div class="movie">
+                             <img class="" alt="내 영상 요청" src="img/main/mypage02.png"/>
+                             <button class="mainbtnB mt10">영상 요청</button>
+                           </div>
+                       </div>
+                   
+                   </div>
+               </div>
+               
+                
+            </div>
+                
+                
+
+        <!--//CONTAINER 영역-->
+        <!--푸터영역-->
+
+        </div>
+        
+    </div>
+    <!-- //내용 바로가기 --> 
+    <!--TOP 영역-->
+    <div class="footer">
+        <div class="footerCenter">
+            <p class="footertext" >54875 전라북도 전주시 완산구 농생명로 300<span> 대표전화 063-238-1000</span> <br/>
+            COPYRIGHT ⓒ 2017 RURAL  DEVELOPMENT ADMINISTRATION. ALL RIGHTS RESERVED.
+            </p> 
+        </div>
+    </div>
+<!--//푸터영역-->
+</body>
+</html>

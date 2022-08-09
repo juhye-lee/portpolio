@@ -1,0 +1,358 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>스마트 농업용 지하수 관측 시스템</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		
+		<link rel="stylesheet" type="text/css" media="all" href="css/layout.css"/>
+		<script src="js/menu.js"></script>
+		
+	</head>
+
+<body>
+  <div class="frame"> 
+      <div class="gnb">
+         <h1><img src="image/logo.png" alt="로고"></h1>
+         <ul class="menu">
+             <li class="on">
+                <a href="#" onclick="menuslide(this)"><img src="image/micon01.png" alt="관측소 아이콘"><span>관측현황</span></a>
+                <ul class="submenu">
+                     <li><a href="#" onclick="subslide(this)">지도현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">수질현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">관측소별 현황</a></li>
+                </ul>
+             </li>
+             <li><a href="#"  onclick="menuslide(this)">
+               <img src="image/micon02.png" alt="관측소현황 아이콘">
+                <span>관측소</span>
+                </a>
+                 <ul class="submenu">
+                     <li><a href="#" onclick="subslide(this)">관측소 현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">점검현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">○○ 관측소</a></li>
+                 </ul>
+             </li>
+             <li>
+                <a href="#" onclick="menuslide(this)">
+                <img src="image/micon03.png" alt="센서/장비 관리 아이콘">
+                <span>센서/장비 관리</span>
+                </a>
+                 <ul class="submenu">
+                     <li><a href="#" onclick="subslide(this)">센서/장비현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">모델명 관리</a></li>
+                     <li><a href="#" onclick="subslide(this)">○○ 센서</a></li>
+                 </ul>
+             </li>
+             <li><a href="#" onclick="menuslide(this)">
+                <img src="image/micon04.png" alt="오염원 관리">
+                <span>오염원 관리</span></a>
+                 <ul class="submenu">
+                     <li><a href="#" onclick="subslide(this)">오연원 현황</a></li>
+                     <li><a href="#" onclick="subslide(this)">○○ 오염원</a></li>
+                 </ul>
+             </li>
+             <li><a href="#" onclick="menuslide(this)">
+                <img src="image/micon05.png" alt="오염원 관리">
+                <span>시스템 관리</span></a>
+                 <ul class="submenu">
+                     <li><a href="#" onclick="subslide(this)">사용자 관리</a></li>
+                 </ul>
+             </li>
+         </ul>
+      </div>
+      <div class="content_whap">
+         <div class="login"> 
+             <p class="name"><span>홍길동</span>님 환영합니다.</p>
+             <button class="btnlogin">로그아웃</button>
+         </div>
+         <div class="content">
+            <div class="search"> 
+                <table class="fl">
+                    <colgroup>
+                        <col width="15%" />
+                        <col width="*" />
+                        <col width="15%" />
+                        <col width="*" />
+                    </colgroup>
+                    <tr>
+                        <th>검색조건</th>
+                        <td>
+                            <select class="S_select wd180">
+                                <option>최근 2시간</option>
+                                <option>3일간 1시간 평균 </option>
+                                <option>60일간 1일 평균</option>
+                                <option>600일간 10일 평균 </option>
+                                <option>3년간 1개월 평균 </option>
+                                <option>1년간 평균 </option>
+                            </select>
+           
+                        </td>
+                        <th>시작일</th>
+                        <td><input type="text" /><button class="date">날짜</button></td>
+                    </tr>
+                </table>
+                <button class="btnsearch fl">검색</button>
+            </div>
+            <div class="sub_con">
+               <div class="left">
+                   <ul class="tab tab05">
+                    <li class="on"><a href="#" onclick="changeText(this)" >일산성질소</a></li>
+                    <li><a href="#" onclick="changeText(this)">염소이온</a></li>
+                    <li><a href="#" onclick="changeText(this)">전기전도도</a></li>
+                    <li><a href="#" onclick="changeText(this)">수온</a></li>
+                    <li><a href="#" onclick="changeText(this)">수위</a></li>
+                   </ul>
+                   
+                   <div class="">
+                       <div class="date02">
+                           <i class="icon"></i>
+                           <span class="clock">2018. 12.04 09:00</span>
+                       </div>
+                       <div class="map" onClick="popWindowOpen();">
+                       <!--지도가 나오는 영역입니다.-->
+                       </div>
+                   </div>
+               </div>
+              
+               <div class="right">
+                  <div class="box">
+                      <p class="box_title">질산성질소 범례</p>
+                      <p class="Gradient"></p>
+                      <div class="Explanation">
+                          <dl class="step01">
+                              <dt><i class="safe"></i>안전</dt>
+                              <dd>0ppm</dd>
+
+                          </dl>
+                          <dl class="step02">
+                             <dt><i class="usually"></i>보통</dt>
+                             <dd>15ppm</dd>
+
+                          </dl>
+                          <dl class="step03">
+                             <dt><i class="danger"></i>위험</dt>
+                             <dd>20ppm</dd>
+                          </dl>
+                      </div>
+
+                       <div class="over">
+                           <i class="Excess"></i>
+                           <span class="Excess01">기준치 초과:21ppm~</span>
+                       </div>
+                  </div>
+                  <div class="box">
+                    <i class="data"></i>
+                    <span class="data01">데이터 수신 장애 시</span>
+                  </div>
+                  <div class="box">
+                      <p class="box_title">일평균 강우량 mm</p>
+                      <p class="Gradient01"></p>
+                      <span>0mm</span>
+                      <span class="fr">100mm</span>
+                          
+                  </div>
+                  <div class="box">
+                  <p class="box_title">시설항목</p>
+                  <ul class="facility">
+                      <li> 
+                      <input type="checkbox" id="facility01"/>
+                      <label for="facility01" class="facility01">가축분뇨 자원화시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility02"/>
+                      <label for="facility02" class="facility02">가축분뇨 배출시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility03"/>
+                      <label for="facility03" class="facility03">개인하수처리 시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility04"/>
+                      <label for="facility04" class="facility04">쓰레기 매립장</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility05"/>
+                      <label for="facility05" class="facility05">지정폐기물 배출 시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility06"/>
+                      <label for="facility06" class="facility06">특정 토양오염 관리 대상시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility07"/>
+                      <label for="facility07" class="facility07">폐기물 처리시설</label>
+                      </li>
+                      <li> 
+                      <input type="checkbox" id="facility08"/>
+                      <label for="facility08" class="facility08">페수 배출시설</label>
+                      </li>
+                  </ul>
+                  
+                  </div>
+               
+               </div>
+            </div>
+             
+         </div>
+         
+          
+      </div>
+  </div>
+  <div class="popUp" >
+     <p class="poptitle01">관련 관측소 추가</p>
+     <img src="image/close.png" alt="닫기버튼" class="closebtn" onclick="popWindowClose();">
+     <div class="pop_box">
+         <p class="poptitle02">동부 1-1</p>
+         <button class="popbtn">관측현황 자세히 보기</button>
+         <table class="poptable_style01">
+            <colgroup>
+                <col width="70%"/>
+                <col width="30%"/>
+            </colgroup>
+            <tr>
+                <th>최근 1시간 상황</th>
+                <td>6/6</td>
+            </tr>
+            <tr>
+                <th>표고(m)</th>
+                <td>212.0</td>
+             </tr>
+             <tr>
+                 <th>굴착깊이(m)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>케이싱구경(mm)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>토출관구경(mm)</th>
+                 <td>100</td>
+             </tr>
+             <tr>
+                 <th>동력장치(HP)</th>
+                 <td>40</td>
+             </tr>
+             <tr>
+             <th>취수허가량(m /월)</th>
+             <td>24,000</td></tr>
+             <tr><th>양수능력(m /일)</th>
+             <td>800</td></tr>
+             <tr><th>자연수위(m)</th>
+             <td>210.1</td></tr>
+             <tr> <th>안정수위(m) </th>
+             <td>210.3</td></tr>
+         </table>
+         <div class="graph">
+             <p class="graph_clock">2018.12.04 08:00~10:50</p>
+             <img src="image/graph.png">
+         </div>
+     </div>
+    <div class="pop_box">
+         <p class="poptitle02">동부 1-1</p>
+         <button class="popbtn">관측현황 자세히 보기</button>
+         <table class="poptable_style01">
+            <colgroup>
+                <col width="70%"/>
+                <col width="30%"/>
+            </colgroup>
+            <tr>
+                <th>최근 1시간 상황</th>
+                <td>6/6</td>
+            </tr>
+            <tr>
+                <th>표고(m)</th>
+                <td>212.0</td>
+             </tr>
+             <tr>
+                 <th>굴착깊이(m)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>케이싱구경(mm)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>토출관구경(mm)</th>
+                 <td>100</td>
+             </tr>
+             <tr>
+                 <th>동력장치(HP)</th>
+                 <td>40</td>
+             </tr>
+             <tr>
+             <th>취수허가량(m /월)</th>
+             <td>24,000</td></tr>
+             <tr><th>양수능력(m /일)</th>
+             <td>800</td></tr>
+             <tr><th>자연수위(m)</th>
+             <td>210.1</td></tr>
+             <tr> <th>안정수위(m) </th>
+             <td>210.3</td></tr>
+         </table>
+         <div class="graph">
+             <p class="graph_clock">2018.12.04 08:00~10:50</p>
+             <img src="image/graph.png">
+         </div>
+     </div>
+     <div class="pop_box ">
+         <p class="poptitle02">동부 1-1</p>
+         <button class="popbtn">관측현황 자세히 보기</button>
+         <table class="poptable_style01">
+            <colgroup>
+                <col width="70%"/>
+                <col width="30%"/>
+            </colgroup>
+            <tr>
+                <th>최근 1시간 상황</th>
+                <td>6/6</td>
+            </tr>
+            <tr>
+                <th>표고(m)</th>
+                <td>212.0</td>
+             </tr>
+             <tr>
+                 <th>굴착깊이(m)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>케이싱구경(mm)</th>
+                 <td>250</td>
+             </tr>
+             <tr>
+                 <th>토출관구경(mm)</th>
+                 <td>100</td>
+             </tr>
+             <tr>
+                 <th>동력장치(HP)</th>
+                 <td>40</td>
+             </tr>
+             <tr>
+             <th>취수허가량(m /월)</th>
+             <td>24,000</td></tr>
+             <tr><th>양수능력(m /일)</th>
+             <td>800</td></tr>
+             <tr><th>자연수위(m)</th>
+             <td>210.1</td></tr>
+             <tr> <th>안정수위(m) </th>
+             <td>210.3</td></tr>
+         </table>
+         <div class="graph">
+             <p class="graph_clock">2018.12.04 08:00~10:50</p>
+             <img src="image/graph.png">
+         </div>
+     </div>
+  </div>
+
+</body>
+</html>

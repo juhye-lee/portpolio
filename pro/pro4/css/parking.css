@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+font-family:'NanumSquare';
+src: url(../font/NanumSquareR.eot);
+src: url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+     url(../font/NanumSquareR.woff) format('woff'),
+     url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+html,body{}
+body {font-family:"NanumSquare",'맑은 고딕',Malgun Gothic,'돋움',dotum,tahoma,sans-serif;font-size:14px;color:#383838;letter-spacing:-1px;}
+select,
+input[type="text"],[type="search"],[type="email"],
+input[type="password"]{font-family:"NanumSquare",'맑은 고딕',Malgun Gothic,'돋움',dotum,tahoma,sans-serif;font-size:14px;color:#444; height:32px;line-height:23px;  border:1px solid #b9b9b9;
+text-indent: 10px;}
+input[type="checkbox"]{width:15px; height:15px;}
+select{ height:34px; line-height:23px;appearance:none; /* Firefox */
+-webkit-appearance:none; /* Safari and Chrome */
+appearance:none;}
+caption { display:none;}
+fieldset,img{ border:0 none;}
+dl,ul,ol,menu,li{ list-style:none}
+button{ overflow:visible; border:0 none; background-color:transparent; cursor:pointer; font-family:"NanumSquare",'맑은 고딕',Malgun Gothic,ng,'돋움',dotum,tahoma,sans-serif; letter-spacing:-1px;}
+address,em {font-style:normal}
+a {text-decoration:none;}
+a:focus,a:active,a:hover {text-decoration:none;}
+table {border-collapse:collapse; border-spacing:0}
+hr {display:none}
+input::-ms-clear {display: none}
+input,textarea {outline-style:none}
+::-webkit-input-placeholder {color:#aeb2ba}
+:-moz-placeholder {color:#aeb2ba}
+::-moz-placeholder {color:#aeb2ba}
+:-ms-input-placeholder {color:#aeb2ba}
+
+.mgr0 { margin-right:0 !important;}
+.cl { clear:both !important;}
+
+#skipnavigation a:focus,
+#skipnavigation a:active {left:0; padding:5px 0; background:#000; color:#fff;}
+#skipnavigation a {width:100%; display:block; position:absolute; left:-3000%; top:0; text-align:center; z-index:2;}
+
+/*헤더영역*/
+.header_area {width: 100%; border-bottom: 1px solid #d9d9d9; background: #fff; }
+.header_area .header_top {max-width:1200px; margin: 0 auto; overflow: hidden; padding: 35px 0px; position: relative;}
+.header_area .header_top .jejulogo{ position: absolute; left: 0;}
+.header_area .header_top .mobilebtn {display: none;}
+.header_area .header_top h1{display:block; text-align: center; }
+.header_area .header_top .search{position: absolute; right: 0; top: 40px; }
+.search .btn_login{background: #0066bd; color: #fff; line-height: 31px;vertical-align: middle; padding: 0px 13px; margin-left: 5px;}
+/*네비영역*/
+nav{width: 100%;background: #fff;}
+nav ul {max-width: 1200px; margin: 0 auto; background: #fff;}
+nav ul li{ display: inline-block; background:url(../image/bar.gif) no-repeat right 17px; font-size: 15px; line-height: 50px; width:24%; text-align: center}
+nav ul li a{font-weight: 600; color: #676767;}
+nav ul li:last-child{background: none;}
+nav ul li a:hover{color:#007ce6;}
+nav ul li.on a{color:#007ce6; }
+	
+/*비주얼영역*/
+.maintitle {max-width: 1200px; margin: 0 auto; width: 100%;}
+.maintitle h3{font-size: 55px; color: #fff; margin-top: 20px;} 
+.maintitle .text { font-size: 15px; margin-top: 20px; color: #fff;font-weight: 600;letter-spacing: 1px;}
+.con_box{max-width: 1200px; margin: 0px auto; overflow: hidden; padding: 80px 0px;}
+.con_box > div{width:25%; float: left;}
+.con_box > div:nth-child(4n+1){ background: #0077dc;}
+.con_box > div:nth-child(4n+1):hover{ background: #0262b3;}
+.con_box > div:nth-child(4n+2){ background: url(../image/boxbg2.png) no-repeat 0 0; background-size:cover;}
+.con_box > div:nth-child(4n+3){background: #0f9d70;}
+.con_box > div:nth-child(4n+3):hover{background: #077351;}
+.con_box > div:nth-child(4n+4){ background: url(../image/boxbg4.png) no-repeat 0 0; background-size: cover;}
+.con_box > div:nth-child(even):hover{-ms-animation-name: boxbgAni; -ms-animation-duration: 1s; -ms-animation-timing-function:ease;}
+.con_box > div:nth-child(even):hover{-webkit- animation-name: boxbgAni; -webkit- animation-duration: 1s; -webkit- animation-timing-function:ease;}
+.con_box > div:nth-child(even):hover{ -o- animation-name: boxbgAni; -o- animation-duration: 1s;  -o- animation-timing-function:ease;}
+.con_box > div:nth-child(even):hover{animation-name: boxbgAni; animation-duration: 1s; animation-timing-function:ease;}
+
+@-moz-keyframes boxbgAni{
+    0% {background-size:110%;} 
+    50% {background-size:120%; } 
+    100% {background-size:110%;}
+}
+@-webkit-keyframes boxbgAni{
+    0% {background-size:110%;} 
+    50% {background-size:120%;} 
+    100% {background-size:110%;}
+}
+@-o-keyframes boxbgAni{
+    0% {background-size:110%;} 
+    50% {background-size:120%;} 
+    100% {background-size:110%;}
+}
+@-ms-keyframes boxbgAni{
+    0% {background-size:110%;} 
+    50% {background-size:120%;} 
+    100% {background-size:110%;}
+}
+
+@keyframes boxbgAni{
+    0% {background-size:110%;} 
+    50% {background-size:120%;} 
+    100% {background-size:110%;}
+}
+
+.con_box > div a{display: block;}
+.con_box .title01{padding:40px 0px 0px 30px; color: #fff; font-size: 18px;}
+.title02{color: #fff; font-size: 22px; font-weight: 600; padding-left: 30px;margin-top: 5px;}
+.text01{color: #dbdbdb; font-size: 12px;margin-top: 20px; line-height: 20px;padding-left: 30px;}
+.go{margin-left: 30px; margin-top: 60px; background: url(../image/go.png) no-repeat right 10px; display: inline-block; color: #fff; font-weight: 500;width: 78px; padding-bottom: 30px; }	
+.box_icon{float: right; margin:30px 30px 0px; }
+
+/*footer*/
+footer{background:#012244; clear:both; overflow: hidden;}
+.fcont{max-width:1200px; margin: 0 auto;padding: 70px 0px; }
+.fconlogo{float:left; padding-bottom: 50px;}
+.styled-select select {background: transparent; width: 230px; padding:5px; font-size:14px; line-height:1;  border:1px solid #939393; border-radius:0; height:30px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; color:#fff;  background:url('../image/new_arrow.gif') no-repeat  100% #5a5e67;}
+.styled-select select::-ms-expand{ display: none;}
+.styled-select {width: 230px;height:30px;overflow: hidden;background:url('../image/new_arrow.gif') no-repeat right #606060;border: 1px solid #484848; float: right;}
+legend {position:absolute;font-size:0px;top:-1000000px;overflow:hidden;}
+fieldset label {position:absolute;font-size:0px;top:-1000000px;overflow:hidden;}
+.fcont address{ float: left; color:#abacb1;letter-spacing: normal; margin-left: 15px;padding-bottom: 50px; }
+
+/*서브페이지*/
+.sub{background: url("../image/sub/sub_bg.jpg") no-repeat 0 0; background-size: 100% 250px;}
+.sub_top{max-width: 1200px; margin: 0 auto; overflow: hidden;}
+.sub_title {float: left;}
+.sub_title h4{font-size: 35px; font-weight: 600; padding-top: 120px; color: #fff;}
+.sub_title .sub_text{font-size: 14px; font-weight: 400; padding-top: 10px; color: #fff;}
+.sub_nav{display: block;float: right; padding-top: 170px;}
+.sub_nav .home{background: url("../image/sub/home.png") no-repeat 0 0; display: block; text-indent: -9999px; width: 20px; height: 20px;}
+.sub_nav li{float: left;background: url("../image/sub/arrow.png") no-repeat right 0; padding: 0 15px;}
+.sub_nav li:last-child{background: none;}
+.sub_nav li a{color: #fff;line-height: 22px;}
+
+.sub_content{max-width: 1200px; margin: 0 auto; min-height: 200px;background: #fff;  box-shadow: -1px 7px 10px #676767; margin-bottom: 20px; margin-top: 10px;
+}
+/*미디어 쿼리*/
+@media all and (max-width:1200px) {
+.header_area .header_top .search{right: 5px;}
+.header_area .header_top .jejulogo{left: 5px;}
+.maintitle h3{ text-indent: 20px;}  
+.maintitle .text{text-indent: 20px;}  
+.sub_title h4{padding-left:20px;} 
+.sub_text{padding-left:20px;}
+.sub_content{margin: 20px 2%;} 
+}
+@media all and (max-width:990px) {
+.con_box > div{width:50%;}
+.con_box > div:nth-child(4n+1){clear: both; }
+.con_box > div:nth-child(4n+2){float: left; }
+.con_box > div:nth-child(4n+3){clear: both;}
+.con_box > div:nth-child(4n+4){float: left;} 
+.visual{background-size:cover;}
+nav{display: block;}
+ ul#slide-list{ margin-left: 20px; }   
+
+    
+.fcont{max-width:1200px; margin: 0 auto;padding: 20px 0px; text-align: center;}
+.fconlogo{ float: none; margin: 0 auto; padding-bottom: 20px;}
+.fcont address{ float: none; color:#abacb1;letter-spacing: normal; padding-bottom: 20px; width: 100%;}
+.styled-select { float: none; margin: 0 auto;}
+.fcont{max-width:1200px; margin: 0 auto;padding: 20px 0px; text-align: center;}
+.fconlogo{ float: none; margin: 0 auto; padding-bottom: 20px;}
+.fcont address{float: none; color:#abacb1;letter-spacing: normal; padding: 0px; text-align: center; margin: 10px auto; width: 90%;}
+.styled-select { float: none; margin: 10px auto;}   
+      
+}    
+@media all and (min-width:691px) {
+    nav{display: block!important;}
+}
+
+@media all and (max-width:690px) {
+ul#slide-list{width: 150px; margin: 2% auto;}
+.header_area .header_top h1 img{width: 150px;}
+.visual{background-size:200%;} 
+nav {display: none;
+    width: 100%; margin: 0px; position: absolute; z-index: 1000; background: #fff;}   
+nav ul li{ display:block; background:none; font-size: 15px; line-height: 50px; width:100%; text-align: left; border-bottom: 1px solid #f1f1f1;}
+nav ul li a{font-weight: 600; color: #676767; padding-left: 10px;}
+nav ul li a:hover{color:#007ce6;}
+nav ul li.on a{color:#007ce6;} 
+    
+.jejulogo{display: none;}
+
+.mobilebtn{position: absolute; left: 5px; display: block!important;}
+.maintitle h3{font-size: 30px; text-align: center;margin-top:30px; text-indent:0px;}  
+.maintitle .text{font-size: 12px; text-align: center; padding: 0px 10px; line-height: 22px; margin-top: 15px; margin-bottom: 20px; text-indent:0px;}  
+.con_box  {padding: 0px;}
+.con_box > div{width:80%; margin: 0 10%; }
+.con_box > div:nth-child(4n+1){clear: both; margin-top: 20px; }
+.con_box > div:nth-child(4n+2){float: both; }
+.con_box > div:nth-child(4n+3){clear: both;}
+.con_box > div:nth-child(4n+4){float: both;} 
+    footer{margin-top: 10%;}   
+.fcont{max-width:1200px; margin: 0 auto;padding: 20px 0px; text-align: center;}
+.fconlogo{ float: none; margin: 0 auto; padding-bottom: 20px;}
+.fcont address{float: none; color:#abacb1;letter-spacing: normal; padding: 0px; text-align: center; margin: 10px; width: 90%;}
+.styled-select { float: none; margin: 0 auto;}
+
+    
+/*서브*/
+.sub_title {float: none ; padding-left: 10px;}
+.sub_title h4{font-size: 25px; padding-top: 50px; text-align: center; padding-bottom: 10px;} 
+.sub_text{display: none;}
+.sub_nav{float: none; padding-top: 0px; display: table; margin: 0 auto;}
+.sub{background: url("../image/sub/sub_bg.jpg") no-repeat 0 0; background-size: 100% 180px;}    
+}
+
+
+

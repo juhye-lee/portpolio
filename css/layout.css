@@ -44,7 +44,7 @@ h3{font-size: 15px; font-weight: 600;margin-bottom: 10px; color: #d58f0e;margin:
 
 .sec02{padding: 20px 0;position: relative;}
 .sec02 h2{text-align: center; font-size: 30px; color: #000;margin: 50px 0 30px 0;}
-.projlist{max-width: 1200px; margin:20px auto;flex-wrap: wrap;transition: all ease 0.5s; opacity:0;display: none;}
+.projlist{max-width: 1200px; margin:20px auto;flex-wrap: wrap;transition: all ease 0.5s; opacity:0;display: none;min-height: 532px;}
 .projlist.active{display: flex;transition: all ease 0.5s;opacity:1;animation: fadeout 1s;}
 @keyframes fadeout {from {opacity: 0.5;}to {opacity: 1;}}
 .projlist li{width: 31.9%; border:1px solid #ddd;border-radius: 5px;margin: 8px; overflow: hidden;transition: all ease 0.5s;height: 250px;box-shadow: 0px 0px 7px #b2b2b2;}

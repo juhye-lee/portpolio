@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>차고지</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>		
+		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/parking.css">
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   9000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+				{image : 'img/visual_img_01.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'img/visual_img_01.jpg', url : ''},
+				{image : 'img/visual_img_02.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'img/visual_img_02.jpg', url : ''}
+												
+												]
+					
+				});
+		    });
+		    
+            
+             $(document).ready(function(){  
+        
+    $('.mobilebtn').click(function(){
+		if( $('nav').is(":visible") ){
+			$('nav').hide();
+		}else{
+			$('nav').show();
+
+		}
+        });
+    });
+
+		</script>
+		
+	</head>
+
+<body>
+
+	<!--Demo styles (you can delete this block)-->
+	
+	<header>
+   <div class="header_area">
+    <div class="header_top">
+         <h2 class="jejulogo"><a href="#"><img src="image/jejulogo.gif"></a></h2>
+         <h2 class="mobilebtn"><a href="#"><img src="image/btn_mo.png"></a></h2>
+         <h1><a href="#"><img src="image/logo.gif" alt="차고지증명제로고"></a></h1>
+         <div class="search">
+         <button class="btn_login">로그인</button>
+         </div>
+    </div>
+  </div>
+  <nav>
+   <ul>
+       <li class="on"><a href="#">차고지 증명 온라인 신청</a></li>
+       <li><a href="#">차고지 증명 방문신청</a></li>
+       <li><a href="#">차고 증명대상 조회</a></li>
+       <li><a href="#">임대 가능한 자고지 조회</a></li>
+   </ul>
+  </nav>
+</header>
+<section class="visual">
+   <div id="controls-wrapper" class="load-item">
+		<div id="controls">
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+			
+		</div>
+	</div>
+    <div class="maintitle">
+        <h3>차고지 증명제</h3>
+        <p class="text">빠르고 편안한 제주만의 특화된 서비스, 선진 주차문화를 이끌어가겠습니다.</p>
+    </div>
+    <section class="con_box">
+             <div>
+               <a href="#">
+                <dl>
+                    <dt class="title01">차고지 증명</dt>
+                    <dt class="title02">온라인 신청하기</dt>
+                    <dd class="text01">차고지 신청 이제 온라인에서<br/> 간단히 신청해보세요.</dd>
+                </dl>
+                <span class="go">바로가기</span>
+                <img class="box_icon" src="image/boxicon1.png" />
+               </a>
+             </div>
+             <div>
+               <a href="#">
+                <dl>
+                    <dt class="title01">차고지 증명</dt>
+                    <dt class="title02">방문 신청하기</dt>
+                    <dd class="text01">고지 신청 절차에 대해서 확인이 가능하고 <br/>신청서를 다운로드 받을 수 있습니다. </dd>
+                </dl>
+                <span class="go">바로가기</span>
+                <img class="box_icon" src="image/boxicon2.png" />
+               </a>
+             </div>
+             <div>
+               <a href="#">
+                <dl>
+                    <dt class="title01">차고지 증명 대상</dt>
+                    <dt class="title02">조회하기</dt>
+                    <dd class="text01">신차 구입, 중고차 구입, 이사 등에 따른 차고지 <br>증명대상인지 여부를 확인하실 수 있습니다</dd>
+                </dl>
+                <span class="go">바로가기</span>
+                <img class="box_icon" src="image/boxicon3.png" />
+               </a>
+             </div>
+             <div>
+               <a href="#">
+                <dl>
+                    <dt class="title01">임대 가능한</dt>
+                    <dt class="title02">차고지 조회하기</dt>
+                    <dd class="text01">차고지가 없는 분들을 위해 사용본거지 주변의 <br/>임대 가능한 차고지를 조회 할 수 있습니다.</dd>
+                </dl>
+                <span class="go">바로가기</span>
+                <img class="box_icon" src="image/boxicon4.png" />
+               </a>
+             </div>
+             
+             
+    </section>
+</section>       
+          
+<footer>
+     <div class="fcont">
+    <div class="fconlogo"><img src="image/flogo.png" alt="푸터 로고"></div>
+    
+    <address>
+        (63208) 제주특별자치도 제주시 광양9길 10, 대표전화：064-120, Gwangyang 9-gil, Jeju-si, Jeju. Republic of Korea 63208<br />
+        <span>Copyright 1999 JEJUSI. All rights reserved</span>
+    </address>
+        <div class="styled-select">
+          <form action="#">
+        <fieldset>
+              <legend>- 관련기관</legend>
+              <label for="local-center">- 관련기관</label>
+              <select id="local-center">
+            <option>- 관련기관</option>
+            <option>관련기관1</option>
+            <option>관련기관2</option>
+            <option>관련기관3</option>
+            <option>관련기관4</option>
+          </select>
+            </fieldset>
+      </form>
+        </div>
+  </div>
+    </footer>
+	
+
+</body>
+</html>

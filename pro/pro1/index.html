@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=yes, minimum-scale=1.0">
+	<title>농업험책보험 통합 정보시스템</title>
+	<link href="./css/main_style.css" rel="stylesheet" type="text/css">
+	<script src="./js/jquery-3.5.1.js"></script>
+	<script src="./js/common.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+
+</head>
+
+<body>
+	<script>
+		$(document).ready(function () {
+			$('.GNB').focusin(function () {
+				$('.GNB').addClass('menuopen');
+				$('.GNB').css("height", 226);
+			});
+
+			$('.Topmenu').focusout(function () {
+				$('.GNB').removeClass('menuopen');
+				$('.GNB').css("height", 54);
+
+			});
+
+
+
+		});
+
+
+
+	</script>
+	<p class="SkipNav"><a href="#Cont">콘텐츠바로가기</a><a href="#GNB">메뉴바로가기</a></p>
+	<!--  헤더 S -->
+	<header>
+		<div class="primary_header">
+			<h1 class="title"><a href="#"><img src="./images/common/logo.png" alt="농업정책보험금융원"></a></h1>
+			<a href="#" class="BtnLogout">로그아웃</a>
+		</div>
+		<!--  메뉴 S -->
+		<nav class="GNB" id="GNB">
+			<!--  탭키이동시 탭초점이 아래 <a>태그에 갔을때 menuopen 클래스 추가해주세요 -->
+			<div class="GNB_con">
+				<ul class="depth01">
+					<li><a href="#">통계정보</a>
+						<ul class="depth02">
+							<li><a href="#">주요지표</a></li>
+							<li><a href="#">자료조회</a></li>
+							<li><a href="#">통계조회</a></li>
+							<li><a href="#">My통계</a></li>
+						</ul>
+					</li>
+					<li><a href="#">통계지도</a>
+						<ul class="depth02">
+							<li><a href="#">통계지도</a></li>
+						</ul>
+					</li>
+					<li><a href="#">정보공유</a>
+						<ul class="depth02">
+							<li><a href="#">OPEN API</a></li>
+							<li><a href="#">나만의 맵 알리기</a></li>
+							<li><a href="#">자료제공</a></li>
+							<li><a href="#">조사자료 등록</a></li>
+						</ul>
+					</li>
+					<li><a href="#">알림마당</a>
+						<ul class="depth02">
+							<li><a href="#">시스템소개</a></li>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">게시판</a></li>
+							<li><a href="#">도움말</a></li>
+						</ul>
+					</li>
+				</ul>
+				<p class="Topmenu">
+					<a href="#" class="admin">관리서비스</a>
+					<a href="#">마이페이지</a>
+				</p>
+			</div>
+		</nav>
+		<!--  메뉴 E -->
+		<!--  전체메뉴 S -->
+		<button class="btn_total">전체메뉴버튼</button>
+		<div class="TotalBack Hidden">
+			<!-- Hidden 클래스 제거시 전체메뉴보임 -->
+			<div class="TotalPop">
+				<div class="homemenu">
+					<P>홈페이지</P>
+					<ul class="Tdepth01">
+						<li class="active"><a href="#">통계정보</a> <!-- active 클래스 추가시 2dep 메뉴활성화 -->
+							<ul class="Tdepth02">
+								<li class=""><a href="#">주요지표</a></li>
+								<li class="smenuOn active"><a href="#">자료조회</a> <!-- active 클래스 3dep추가시 메뉴활성화 -->
+									<ul class="Tdepth03">
+										<li><a href="#">마이크로데이터</a></li>
+										<li><a href="#">대상모수</a></li>
+										<li><a href="#">농작품 현황조회</a></li>
+									</ul>
+								</li>
+								<li class="smenuOn"><a href="#">통계조회</a>
+									<ul class="Tdepth03">
+										<li><a href="#">일별실적</a></li>
+										<li><a href="#">월별실적</a></li>
+										<li><a href="#">연도별실적</a></li>
+										<li><a href="#">통계보고서</a></li>
+									</ul>
+								</li>
+								<li class="smenuOn"><a href="#">My 통계</a>
+									<ul class="Tdepth03">
+										<li><a href="#">피벗조회</a></li>
+										<li><a href="#">R 연동</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="lastmenu"><a href="#">통계지도</a></li>
+						<li class=""><a href="#">정보공유</a>
+							<ul class="Tdepth02">
+								<li><a href="#">OPEN API</a></li>
+								<li><a href="#">나만의 맵 알리기</a></li>
+								<li><a href="#">자료제공</a></li>
+								<li><a href="#">조사자료 등록</a></li>
+							</ul>
+						</li>
+						<li><a href="#">알림마당</a>
+							<ul class="Tdepth02">
+								<li><a href="#">시스템소개</a></li>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">게시판</a></li>
+								<li><a href="#">도움말</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="adminmenu">
+					<p>관리자서비스</p>
+					<div class="admincon">
+						<ul class="Tdepth01">
+							<li><a href="#none">사용자 관리</a>
+								<ul class="Tdepth02">
+									<li><a href="/manage/member/userList.do">사용자 관리</a></li>
+									<li><a href="/manage/member/userJoinList.do">가입승인 관리</a></li>
+									<li><a href="/manage/member/userLogList.do">사용자로그 관리</a></li>
+									<li><a href="/manage/member/userAuthList.do">사용자권한 관리</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">시스템통계 관리</a>
+								<ul class="Tdepth02">
+									<li><a href="/manage/member/userChartList.do">시스템사용통계</a></li>
+									<li><a href="#">API사용통계</a></li>
+								</ul>
+							</li>
+							<li><a href="#">게시판관리</a>
+								<ul class="Tdepth02">
+									<li><a href="/manage/board/notice.do">공지사항관리</a></li>
+									<li><a href="/manage/board/bulletin.do">게시판관리</a></li>
+									<li><a href="/manage/board/shareMapList.do">나만의맵관리</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="Tdepth01">
+							<li><a href="#">API관리</a>
+								<ul class="Tdepth02">
+									<li><a href="#">AI목록</a></li>
+									<li><a href="/manage/regist/request/publicDataRequestList.do">공개데이터 신청 관리</a></li>
+									<li><a href="/manage/regist/publicData/requestDataPage.do">공개데이터 요청정보 관리</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">메타관리</a>
+								<ul class="Tdepth02">
+									<li><a href="/manage/meta/metaPage.do">메타관리</a></li>
+									<li><a href="/manage/meta/code/codePage.do">통합코드관리</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="Tdepth01">
+							<li><a href="#none">자료등록 및 관리</a>
+								<ul class="Tdepth02">
+									<li><a href="/manage/regist/data/dalyList.do">일자료 등록 및 관리</a></li>
+									<li><a href="/manage/regist/data/monthList.do">월자료 등록 및 관리</a></li>
+									<li><a href="/manage/regist/gis/dataList.do">공간통계등록 및 관리</a></li>
+									<li><a href="/manage/regist/paramt/paramtList.do">기초자료 (모수) 관리</a></li>
+									<li><a href="#">기초자료(요율) 관리</a></li>
+									<li><a href="/manage/regist/ntntrs/ntntrsList.do">국고지원금 상한제 관리</a></li>
+									<li><a href="/manage/regist/dalyFile/listPage.do">일별재해보험 실적 관리</a></li>
+									<li><a href="/manage/regist/agricultureFile/aListPage.do">농업재해보험 연감 관리</a></li>
+									<li><a href="/manage/regist/searchQuery/queryListPage.do">통합 조회쿼리 관리</a></li>
+									<li><a href="/manage/data/reportDataList.do">보고서 등록 및 관리</a></li>
+									<li><a href="/manage/integration/dataComparison.do">데이터 비교</a></li>
+									<li><a href="#">통계표 등록 및 관리</a></li>
+									<li><a href="#">통계 정합성 검증</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mapage">
+					<p>마이페이지</p>
+					<a href="#"><img src="./images/common/icon_mypage.png" alt="마이페이지" /> <span>마이페이지</span></a>
+					<a href="#"><img src="./images/common/icon_mydata.png" alt="데이터조회" /> <span>데이터조회</span></a>
+				</div>
+				<button class="TPopcolose">닫기</button>
+			</div>
+		</div>
+		<!--  전체메뉴 E -->
+	</header>
+	<!--  헤더 E -->
+
+	<!--  컨첸츠 S -->
+	<section id="wrap-container" class="main">
+		<div class="main_wrap">
+
+			<!-- ////////////////////////////////////////수정한부분 ///////////////////////////////////////////////////////////-->
+			<div class="backimg">
+				<p class="shape-left-top scrollani"></p>
+				<p class="shape-center-bottom scrollani"></p>
+				<p class="shape-right-top scrollani"></p>
+				<p class="shape-right-bottom scrollani"></p>
+			</div>
+			<div class="main-visual" id="Cont">
+				<div class="left">
+					<span class="line">
+						<span><a  href="#">농작물<span>(21년 7월)</span></a>
+							<span><em><i class="numberani">45.4</i><span>%</span></em></span>
+						</span>
+					</span>
+					<span class="line"><span><a href="#">가축<span>(21년 7월)</span></a><span><em><i
+										class="numberani">88.5</i><span>%</span></em></span></span></span>
+					<span class="line"><span><a  href="#">농업인<span>(21년 7월)</span></a><span><em><i
+										class="numberani">100.8</i><span>%</span></em></span></span></span>
+					<span class="line"><span><a  href="#">농기계<span>(21년 7월)</span></a><span><em><i
+										class="numberani">9.3</i><span>%</span></em></span></span></span>
+				</div>
+				<div class="right">
+					<div class="head">
+						<ul class="slide_control_title">
+							<li class="item on">
+								<strong>농작물</strong>
+								<span>가입률</span>
+							</li>
+							<li class="item">
+								<strong>가축</strong>
+								<span>가입률</span>
+							</li>
+							<li class="item">
+								<strong>농업인</strong>
+								<span>가입률</span>
+							</li>
+							<li class="item">
+								<strong>농기계</strong>
+								<span>가입률</span>
+							</li>
+						</ul>
+						<div class="slide_control_box">
+							<a href="javascript:void(0);" id="btnMainJipyoB1" class="on"><span>1</span></a>
+							<a href="javascript:void(0);" id="btnMainJipyoB2"><span>2</span></a>
+							<a href="javascript:void(0);" id="btnMainJipyoB3"><span>3</span></a>
+							<a href="javascript:void(0);" id="btnMainJipyoB4"><span>4</span></a>
+						</div>
+						<a href="javascript:void(0);" class="btn_left"><span>이전</span></a>
+						<a href="javascript:void(0);" class="btn_right"><span>다음</span></a>
+					</div>
+					<div class="detalinum">
+						<ul>
+							<li class="ac">
+								<ul>
+									<li>
+										<strong>2021년 08월</strong>
+										<span class="detail1"><i>10.0</i><span>%</span></span>
+									</li>
+									<li>
+										<strong>2021년 09월</strong>
+										<span class="detail1"><i>11.1</i><span>%</span></span>
+									</li>
+									<li>
+										<strong >2021년 10월</strong>
+										<span class="detail1"><i>0.0</i><span>%</span></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<strong>2021년 08월</strong>
+										<span class="detail1"><i>22.2</i><span>%</span></span>
+									</li>
+									<li>
+										<strong>2021년 09월</strong>
+										<span class="detail1"><i>22.2</i><span>%</span></span>
+									</li>
+									<li>
+										<strong >2021년 10월</strong>
+										<span class="detail1"><i>22.2</i><span>%</span></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<strong>2021년 08월</strong>
+										<span class="detail1"><i>33.3</i><span>%</span></span>
+									</li>
+									<li>
+										<strong>2021년 09월</strong>
+										<span class="detail1"><i>33.3</i><span>%</span></span>
+									</li>
+									<li>
+										<strong >2021년 10월</strong>
+										<span class="detail1"><i>33.3</i><span>%</span></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>
+										<strong>2021년 08월</strong>
+										<span class="detail1"><i>44.4</i><span>%</span></span>
+									</li>
+									<li>
+										<strong>2021년 09월</strong>
+										<span class="detail1"><i>44.4</i><span>%</span></span>
+									</li>
+									<li>
+										<strong >2021년 10월</strong>
+										<span class="detail1"><i>44.4</i><span>%</span></span>
+									</li>
+								</ul>
+							</li>
+						
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="mainmunu">
+				<ul class="visual_right">
+					<li><a href="#"><strong>농심품 현황판</strong></a></li>
+					<li><a href="#"><strong>검증 조사</strong></a></li>
+					<li><a href="#"><strong>자료제공</strong></a></li>
+					<li><a href="#"><strong>도움말</strong></a></li>
+				</ul>
+			</div>
+				<!-- ////////////////////////////////////////수정한부분 E ///////////////////////////////////////////////////////////S -->
+		</div>
+		<div class="bottom_content">
+			<div class="notice_con">
+				<div class="notice">
+					<h3 class="title">공지사항</h3>
+					<ul>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지.</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지 않았습니다</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지 않았습니다</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지 않았습니다</span> <span
+									class="date">2020.09.14</span></a></li>
+					</ul>
+					<a href="#" class="more">더보기</a>
+				</div>
+				<div class="notice">
+					<h3 class="title">게시판</h3>
+					<ul>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지</span> <span
+									class="date">2020.09.14</span></a></li>
+						<li><a href="#"> <span class="title">농업정책보험 통합정보시스템 오픈이 얼마남지</span> <span
+									class="date">2020.09.14</span></a></li>
+					</ul>
+					<a href="#" class="more">더보기</a>
+				</div>
+			</div>
+			<div class="mymap">
+				<a href="#">
+					<span class="title"><span>나만의 맵 </span>알리기</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!--  컨첸츠 E -->
+	<!--  푸터 S -->
+	<footer class="footer">
+		<div class="footercon">
+			<div class="footerCnt">
+				<ul class="policy">
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+				</ul>
+				<div class="GoSite">
+					<a href="#" class="title">관련사이트 바로가기</a>
+					<ul class="goSiteUl Hidden">
+						<!-- Hidden 클래스 제거시 관련사이트보임 -->
+						<li><a href="#" target="_blank">STATISTICS KOREA</a></li>
+						<li><a href="#" target="_blank">KOSIS</a></li>
+						<li><a href="#" target="_blank">SGIS</a></li>
+						<li><a href="#" target="_blank">MDIS</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<img src="./images/common/foorterlogo.png" alt="농업정책보험금융원">
+			<p>(우)07241 서울특별시 영등포구 여의공원로 101, 2층 (여의도동, CCMM빌딩)<br />
+				TEL 02-3775-6700 / Fax : 02-780-4725 (2층), 02-3775-6870 (3층, 정책보험), 02-3775-6779 (3층, 모태펀드)<br />
+				webmaster : <a href="mailto:helpdesk@apfs.kr"> helpdesk@apfs.kr</a><br />
+				Copyright ⓒ 농업정책보험금융원 All rights reserved.</p>
+		</div>
+	</footer>
+	<!--  푸터 E -->
+
+</body>
+
+</html>

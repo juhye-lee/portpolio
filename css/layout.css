@@ -1,5 +1,6 @@
 @charset "utf-8";
-
+html {scroll-behavior: smooth;}
+body{min-width: 1600px;}
 @font-face {font-family: 'GmarketSansTTFBold';src: url(../font/GmarketSansTTFBold.ttf);}
 nav{width: 100%; position: fixed; width: 100%;background: #fff;top: 0;z-index: 999;border-bottom: 1px solid #f8eec3;}
 nav div{max-width: 1600px; margin: 0 auto;}
@@ -8,11 +9,11 @@ nav .menu{float: right;}
 nav .menu li{display: inline-block;}
 nav .menu li a{font-size: 20px; font-weight: 600; padding:  0 30px;line-height: 80px;color: #000;}
 
-.sec01 {background: #fffae5;padding: 20px 0;margin-top: 80px;position: relative;overflow: hidden;}
+.sec01 {background: #fffae5;padding: 60px 0;margin-top: 80px;position: relative;overflow: hidden;}
 .sec01::after{content: ''; width: 500px; height: 500px;  background: url(../img/back02.png) no-repeat 0 0;display: block;position: absolute;/* top: 0px; */right: -311px;bottom: 0px;}
 .sec01 .container{max-width: 1600px;margin: 0 auto;display: flex;}
 .sec01 .container .box{display: inline-block;width: 33%;padding: 40px;}
-.sec01 .container .box.one .image{width: 100%; height: 300px;background: #f1b9a1;}
+.sec01 .container .box.one .image{width: 100%; height: 300px;background: #f1b9a1 url(../img/me.jpg) no-repeat center -30px;}
 .profile {margin-top: 20px;}
 .profile li{display:block; font-size: 15px; font-weight: 600;line-height: 1.7;font-size: 18px;}
 .profile li::before{content:'';}
@@ -43,17 +44,18 @@ h3{font-size: 15px; font-weight: 600;margin-bottom: 10px; color: #d58f0e;margin:
 .skillgraph dd.percent::after{content:'%';font-size: 15px;padding-left: 2px;}
 
 .sec02{padding: 20px 0;position: relative;}
-.sec02 h2{text-align: center; font-size: 30px; color: #000;margin: 50px 0 30px 0;}
+.sec02 h2{text-align: center; font-size: 30px; color: #000;margin: 100px 0 30px 0;}
 .projlist{max-width: 1200px; margin:20px auto;flex-wrap: wrap;transition: all ease 0.5s; opacity:0;display: none;min-height: 532px;}
 .projlist.active{display: flex;transition: all ease 0.5s;opacity:1;animation: fadeout 1s;}
 @keyframes fadeout {from {opacity: 0.5;}to {opacity: 1;}}
-.projlist li{width: 31.9%; border:1px solid #ddd;border-radius: 5px;margin: 8px; overflow: hidden;transition: all ease 0.5s;height: 250px;box-shadow: 0px 0px 7px #b2b2b2;}
+.projlist li{position: relative; width: 31.9%; border:1px solid #ddd;border-radius: 5px;margin: 8px; overflow: hidden;transition: all ease 0.5s;height: 250px;box-shadow: 0px 0px 7px #b2b2b2;}
 .projlist li a{width: 100%;height: 100%;position: relative;}
 .projlist li a span{position: absolute; top: 0%;left: 50%; color: #000; font-weight: 600; font-size: 20px;transform: translateX(-50%);z-index: 0;}
 .projlist li a span i{position: absolute; top: 40%;left: 50%;transform: translate(-50%,-50%);font-size: 25px;color: #fff;font-weight: 600;transition: all ease 0.5s;}
 .projlist li a:hover span{z-index: 9; background: rgba(27, 13, 1, 0.7);color: #fff;width: 100%;display: block;height: 100%;top: 0;transition: all ease 0.5s; text-align: center;}
 .projlist li a:hover span i{top: 50%;}
 .projlist li a img{position: absolute; top: 0%;left: 50%; transform: translateX(-50%);width: 100%;}
+.projlist li img{position: absolute; top: 0%;left: 50%; transform: translateX(-50%);width: 100%;}
 
 .arrow button.left{text-indent: -9999px;width: 45px;height: 100px;background: url(../img/arow.png) no-repeat center;position: absolute; top: 50%; transform: translateY(-50%) ;left:calc((100% - 1200px)/3)}
 .arrow button.right{text-indent: -9999px;width: 45px;height: 100px;background: url(../img/arow.png) no-repeat center;position: absolute; top: 50%;right: calc((100% - 1200px)/3);transform:rotate(180deg) translateY(-50%);overflow: hidden;transform-origin:50% 15%}
@@ -64,3 +66,10 @@ h3{font-size: 15px; font-weight: 600;margin-bottom: 10px; color: #d58f0e;margin:
 .favorite li{width: 100%;font-size: 16px;font-weight: 600;line-height: 30px;position: relative;padding-left: 15px;color: #000;}
 .favorite li::before{content: '';width: 5px;height: 3px; display: inline-block; background: #c73d00; position: absolute; top: 13px;left: 0px;}
 .line{border-top: 1px dashed #efcb30;padding-top: 40px;}
+
+
+.sec03{padding: 20px 0 50px 20px;position: relative;background: #fffce4;}
+.sec03 h2{text-align: center; font-size: 30px; color: #000;margin: 50px 0 30px 0;}
+.sec03 a{background: #fff; margin: 0 auto; max-width: 80%; text-align: center;display: block;font-size: 30px;border: 1px solid #ddd;padding: 10px 0;}
+.sec03 a:hover{color: #c73d00;}
+

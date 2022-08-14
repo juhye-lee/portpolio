@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>차고지</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/parking_business.css" />
+		<script type="text/javascript" src="js/stellarnav.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="css/stellarnav.css" />
+		<script type="text/javascript">
+             $(document).ready(function(){  
+                jQuery('.stellarnav').stellarNav({
+				theme: 'light'
+			     }); 
+                 
+                 $(".menu li").click(function() {
+                     $(this).siblings().removeClass();
+                     $(this).addClass("on");
+                       
+                 });
+        
+			});
+
+           
+		</script>
+	</head>
+
+<body>
+	<div id="skipnavigation"><a href="">본문으로 바로가기</a> <a href="">메뉴로 바로가기</a></div>
+	
+
+<div>
+   <div class="util_area">
+       <div class="util">
+       <p class="util_title">영업용 차고지 관리시스템</p>
+       <ul class="util_function">
+          <li><a href="#">행정용</a></li>
+          <li><a href="#">빠른조회</a></li>
+          <li><a href="#">지적조회</a></li>
+          <li><a href="#">거리검색</a></li>
+          <li><a href="#">주민망조회</a></li>
+          <li><a href="#">차량망조회</a></li>
+          <li><a href="#">내 정보</a></li>
+          <li><a href="#">로그아웃</a></li>
+       </ul></div>
+       
+   </div>
+   <div class="nav_area">
+    <div class="nav">
+         <h1 class="logo"><a href="#"><img src="image/admin_logo.png" alt="로고" /></a></h1>
+         <div class="stellarnav">
+             <ul class="menu">
+                 <li class="on"><a href="#">화물차</a>
+                    <ul id="submneu_01">
+                        <li><a href="#">차고지 목록</a></li>
+                        <li><a href="#">차고지 신규 등록</a></li>
+                    </ul>
+                 </li>
+                 <li><a href="#">택시</a>
+                    <ul id="submneu_02">
+                        <li><a href="#">증명신청서 작성</a></li>
+                        <li><a href="#">증명신청 관리</a></li>
+                        <li><a href="#">차고지 허가 목록</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#">버스</a>
+                    <ul id="submneu_03">
+                        <li><a href="#">전세버스 차고지 목록</a></li>
+                        <li><a href="#">전세버스 차고지 신규 등록</a></li>
+                        <li><a href="#">전세버스 차고지 신규 등록</a></li>
+                        <li><a href="#">노선버스 차고지 신규 등록</a></li>
+                    </ul>
+                  </li>
+                 <li><a href="#">렌터카</a>
+                     <ul id="submneu_04">
+                        <li><a href="#">차고지 목록</a></li>
+                        <li><a href="#">차고지 신규 등록</a></li>
+                     </ul>
+                  </li>
+                 <li><a href="#">시스템관리</a>
+                     <ul id="submneu_05">
+                        <li><a href="#">사용자 관리</a></li>
+                        <li><a href="#">그룹관리</a></li>
+                        <li><a href="#">그룹 권한관리</a></li>
+                        <li><a href="#">공지사항 관리</a></li>
+                        <li><a href="#">배치로그</a></li>
+                        <li><a href="#">시스템 로그</a></li>
+                        <li><a href="#">주소코드 등록</a></li>
+                    </ul>
+                 </li>
+                 <li><a href="#">게시판</a></li>
+             </ul>
+        </div>
+    </div>
+    
+  </div>
+
+</div>
+<div class="sub">
+  <div class="sub_top">
+      <div class="sub_title">
+          <h4>영업용 차고지 게시판</h4>
+      </div>
+      <ul class="sub_nav">
+          <li><a class="home" href="#">홈</a></li>
+          <li><a href="#">차량 정보 조회</a></li>
+      </ul>
+  </div>
+  <div class="sub_content">
+      <div class="Packing">
+        <!-- <h5>게시판목록</h5>  -->
+         <div class="">
+            <div class="page_setup">
+                 <p class="page_Count">총: <span>25</span>건</p>
+
+                 <p class="page_view">
+                 <select id="usage1" class="wd50 ml5">
+                      <option>10</option>
+                      <option>20</option>
+                      <option>30</option>
+                 </select>
+                 건씩&nbsp;&nbsp;보기
+                 </p>
+             </div>
+         </div>
+             <table class="tabletype02"> <!--class="tabletype02"는 기본 목록타입 테이블입니다.-->
+               <caption>목록</caption>
+                  <colgroup>
+                      <col width="5%"/>
+                      <col width="35%"/>
+                      <col width="10%"/>
+                      <col width="10%"/>
+                      <col width="12%"/>
+                      <col width="10%"/>
+                      <col width="8%"/>
+                      <col width="10%"/>
+
+                  </colgroup>
+                  <thead> 
+                    <tr>
+                         <th>번호</th>
+                         <th>제목</th>
+                         <th>성명</th>
+                         <th>소속</th>
+                         <th>그룹</th>
+                         <th>등록일</th>
+                         <th>조회수</th>
+                         <th>첨부파일</th>
+                     </tr>
+                 </thead>
+                <tbody>
+                     <tr>
+                         <td>10</td>
+                         <td>제주시 화물차 차고지 등록현황 통계자료</td>
+                         <td>김주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>100</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>9</td>
+                         <td>연동 8월 차고지 현장조사 관련한 내용</td>
+                         <td>이주무관</td>
+                         <td>연동</td>
+                         <td>현장확인(동 담당자)</td>
+                         <td>2018-08-25</td>
+                         <td>20</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>8</td>
+                         <td>이호동 8월 차고지 현장조사 관련 내용</td>
+                         <td>정주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>50</td>
+                         <td class="plusfile"></td>
+                     </tr>
+                     <tr>
+                         <td>7</td>
+                         <td>제주시 화물차 차고지 등록현황 통계자료</td>
+                         <td>김주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>100</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>6</td>
+                         <td>연동 8월 차고지 현장조사 관련한 내용</td>
+                         <td>이주무관</td>
+                         <td>연동</td>
+                         <td>현장확인(동 담당자)</td>
+                         <td>2018-08-25</td>
+                         <td>20</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>5</td>
+                         <td>이호동 8월 차고지 현장조사 관련 내용</td>
+                         <td>정주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>50</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>4</td>
+                         <td>제주시 화물차 차고지 등록현황 통계자료</td>
+                         <td>김주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>100</td>
+                         <td class="plusfile"></td>
+                     </tr>
+                     <tr>
+                         <td>3</td>
+                         <td>연동 8월 차고지 현장조사 관련한 내용</td>
+                         <td>이주무관</td>
+                         <td>연동</td>
+                         <td>현장확인(동 담당자)</td>
+                         <td>2018-08-25</td>
+                         <td>20</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>2</td>
+                         <td>이호동 8월 차고지 현장조사 관련 내용</td>
+                         <td>정주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>50</td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td>1</td>
+                         <td>이호동 8월 차고지 현장조사 관련 내용</td>
+                         <td>정주무관</td>
+                         <td>차량관리과</td>
+                         <td>관리자</td>
+                         <td>2018-09-02</td>
+                         <td>50</td>
+                         <td class="plusfile"></td>
+                     </tr>
+                 </tbody>
+             </table>
+                
+         
+        <ul class="paging">
+            <li class="before_fast"><a href="#">10개이전</a></li>
+            <li class="before">이전</li>
+            <li class="on"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li class="next">다음</li>
+           <li class="next_fast"><a href="#">10개다음</a></li>
+            
+        </ul>
+
+         <div class="btn_sectionR">
+          <button class="Enrollment_btn" >등록하기</button>
+      </div>
+      </div>
+      
+  </div>
+</div>
+
+          
+<div class="footer">
+     <div class="fcont">
+    <div class="fconlogo"><img src="image/flogo.png" alt="푸터 로고" /></div>
+    
+    <address>
+       (63122) 제주특별자치도 제주시 문연로 6(연동), 대표전화：064-120, 6, Munyeon-ro, Jeju-si, Jeju-do, Republic of Korea 63122<br />
+        <span>Copyright 1999 JEJUSI. All rights reserved</span>
+    </address>
+        <div class="styled-select">
+          <form action="#">
+        <fieldset>
+              <legend>- 관련기관</legend>
+              <label for="local-center">- 관련기관</label>
+              <select id="local-center">
+            <option>- 관련기관</option>
+            <option>관련기관1</option>
+            <option>관련기관2</option>
+            <option>관련기관3</option>
+            <option>관련기관4</option>
+          </select>
+            </fieldset>
+      </form>
+        </div>
+  </div>
+</div>
+	
+
+</body>
+</html>

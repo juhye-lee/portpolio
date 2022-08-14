@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    var secheight = $('.sec01');
-    var winh = $(window).height();
-    secheight.height(winh - 120);
+    // var secheight = $('.sec01');
+    // var winh = $(window).height();
+    // secheight.height(winh - 120);
     var percent = $('.percent');
     var percenttex = [];
     for (var i = 0; i < percent.length; i++) {percenttex.push(percent.eq(i).text());};

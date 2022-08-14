@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'Noto-KR';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular');
+    src: url(../font/NotoSansKR-Regular-Hestia.woff2) format('woff2');
+}
+
+  /* 에스코어 드림 폰트 */
+@font-face {
+    font-family: 'Noto-KR';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium');
+    src:url(../font/NotoSansKR-Medium-Hestia.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'SCDream8';
+    src: url(../font/SCDream8.otf) format('opentype');
+}
+@font-face {
+    font-family: 'SCDream6';
+    src: url(../font/SCDream6.otf) format('opentype');
+}
+@font-face {
+    font-family: 'SCDream5';
+    src: url(../font/SCDream5.otf) format('opentype');
+}
+@font-face {
+    font-family: 'SCDream4';
+    src: url(../font/SCDream4.otf) format('opentype');
+}
+

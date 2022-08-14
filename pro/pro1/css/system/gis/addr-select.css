@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.addr-parent{position:relative;vertical-align:middle;padding:0}
+.addr-label{display:block;width:100%;height:30px;padding:0;overflow:hidden;cursor:pointer;border:1px solid #ccc;text-align:left;white-space:nowrap;line-height:26px;color:#444;text-decoration:none;border-radius:0px;background-color:#fff;}
+.addr-label:focus{outline:none;box-shadow:none;}
+.addr-label.disabled{background-color:#f4f4f4;background-image:none;border:1px solid #ddd;cursor:default}
+.addr-label>span{position:absolute;top:2px;left:0;right:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;padding-left:8px;color:#49505a;font-size:13px}
+.addr-label>div.icon-close{position:absolute;top:0;right:16px;height:100%;width:16px}
+.addr-label>div.icon-close:before{content:'Ã—';color:#888;font-weight:bold;position:absolute;top:50%;margin-top:-14px}
+.addr-label>div.icon-close:hover:before{color:#333}
+.addr-label>div.icon-caret{position:absolute;width:0;height:0;top:38%;right:8px;margin-top:-2px;border-color:#888 transparent transparent transparent;border-style:solid;border-width:5px 4px 0 4px;padding:0}
+.addr-label>div.icon-caret.open{border-color:transparent transparent #888 transparent;border-width:0 4px 5px 4px}
+.addr-area {position: absolute;top: 30px;border: 1px solid #ccc;background: #fff;display: none;z-index: 10000;width: 397px;height: 252px;}
+.addr-select{overflow: hidden;padding: 10px}
+.addr-area .addr-select ul {float: left;position: relative;overflow-y: scroll;width: 153px;height: 194px;background: #f4f6f8;display: block !important}
+.addr-area .addr-select li {padding-left: 10px;height: 23px;line-height: 23px;cursor: pointer;font-size: 13px;color: #505360}
+.addr-area .addr-select li:not(.disabled):hover, .addr-select li.on {background: #424852;color: #ffffff}
+.addr-select li.on label span{background: #424852;color: #ffffff}
+.addr-area div.btn-addr-group {margin-bottom: 10px;text-align: center !important}
+.addr-area ul li input[type="radio"],.addr-area ul li input[type="checkbox"] {position: absolute;margin-top: .3rem;margin-left: -1.25rem}
+.addr-area div:last-child > span {display: inline-block;box-sizing: border-box;vertical-align: middle;margin-right: 5px}
+.addr-area div:last-child > span:first-child > a {color: #fff;background: #3e4452}
+.addr-area div:last-child > span:first-child > a:hover {background-color:#3483eb}
+#addr-choose{left: 420px!important;}
+#addr-choose>.addr-parent{ margin-left: 10px; border: 1px solid #ddd; min-width: 340px;}

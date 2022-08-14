@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>HUB-PoP for Gen</title>
+
+    <link href="../css/sub.css" rel="stylesheet" media="all">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/action.js"></script>
+</head>
+
+<body>
+    <div class="Wrapper">
+        <header class="header">
+            <div class="top">
+                <p class="proName">발전DATA <span>PLATFORM</span></p>
+                <div class="loginfo"><a href="#" class="user">관리자 님</a><a href="#" class="logout">로그아웃</a></div>
+            </div>
+            <h1><a href="../index.html">KOEN 한국남동발전</a></h1>
+            <!-- 주요메뉴 S -->
+            <nav class="GNB">
+                <ul>
+                    <li><a href="#">통합 대시보드</a>
+                        <p class="subname">통합 대시보드<img src="../images/common/openmenu01.png" alt=""></p><!--  D: 이미지 1~13까지있음 골라서 쓰세요 -->
+                        <ul>
+                            <li><a href="#">통합 대시보드</a></li>
+                            <li><a href="#">Topolgy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">HMI 모니터링</a>
+                        <p class="subname">HMI 모니터링<img src="../images/common/openmenu02.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">HMI 목록</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">데이터 조회</a>
+                        <p class="subname">데이터 조회<img src="../images/common/openmenu03.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">발전운전 데이터</a>
+                                <ul>
+                                    <li><a href="#">데이터 조회</a></li>
+                                    <li><a href="#">실시간 태그 그래프 조회</a></li>
+                                    <li><a href="#">이력 태그 그래프 조회</a></li>
+                                    <li><a href="#">그룹데이터조회</a></li>
+                                    <li><a href="#">그룹별 그래프 조회</a></li>
+                                    <li><a href="#">분석데이터조회</a></li>
+                                    <li><a href="#">분석그래프조회</a></li>
+                                    <li><a href="#">이력데이터 쿼리조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">LEGACY 데이터</a>
+                                <ul>
+                                    <li><a href="#">Legacy 수집목록 조회</a></li>
+                                    <li><a href="#">Legacy 데이터 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">발전운전 데이터 분석</a>
+                        <p class="subname">발전운전 데이터 분석<img src="../images/common/openmenu04.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">테그 그룹 등록</a>
+                                <ul>
+                                    <li><a href="#"> 원본/표준설비 매핑 조회</a></li>
+                                    <li><a href="#"> 원본설비 표준설비 매핑 조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">분석 대상 관리</a></li>
+                            <li><a href="#">분석 결과 조회</a></li>
+                            <li><a href="#">분석 결과 조회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">데이터 분석 추출</a>
+                        <p class="subname">데이터 분석 추출<img src="../images/common/openmenu05.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">대용량 데이터 추출 요청</a></li>
+                            <li><a href="#">수집</a>
+                                <ul>
+                                    <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                    <li><a href="#">Legacy스키마 조회</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="#">발전운전 데이터 관리</a>
+                        <p class="subname">발전운전 데이터 관리<img src="../images/common/openmenu06.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">수집</a>
+                                <ul>
+                                    <li><a href="#">Adapter 정보관리</a></li>
+                                    <li><a href="#">태그수집현황조회</a></li>
+                                    <li><a href="#">원본태그조회</a></li>
+                                    <li><a href="#">표준태그조회</a></li>
+                                    <li><a href="#">분산저장태그목록</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">표준화</a>
+                                <ul>
+                                    <li><a href="#">표준화 매핑 변환 현황</a></li>
+                                    <li><a href="#">표준 태그 매핑 적용</a></li>
+                                    <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">저장</a>
+                                <ul>
+                                    <li><a href="#">저장 대상 관리 </a></li>
+                                    <li><a href="#">분산 저장 관리 </a></li>
+                                    <li><a href="#">분산저장현황조회</a></li>
+                                    <li><a href="#">분산저장태그목록</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Legacy 데이터 관리</a>
+                        <p class="subname">Legacy 데이터 관리<img src="../images/common/openmenu07.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">수집</a>
+                                <ul>
+                                    <li><a href="#">LEGACY 수집대상 관리</a></li>
+                                    <li><a href="#">LEGACY 수집작업 관리</a></li>
+                                    <li><a href="#">LEGACY 수집작업 스케줄 관리</a></li>
+                                    <li><a href="#">LEGACY 그룹 관리</a></li>
+                                    <li><a href="#">LEGACY 데이터 추출 </a></li>
+                                    <li><a href="#">원본모델조회</a></li>
+                                    <li><a href="#">공통참조모델 조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">표준화</a>
+                                <ul>
+                                    <li><a href="#">원본모델-공통참조모델 매핑조회 </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">LEGACY</a>
+                                <ul>
+                                    <li><a href="#">Legacy 스키마관리</a></li>
+                                    <li><a href="#">Legacy스키마 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">설비 · APP 데이터 관리</a>
+                        <p class="subname">설비 · APP 데이터 관리<img src="../images/common/openmenu08.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">수집</a>
+                                <ul>
+                                    <li><a href="#">원본설비조회</a></li>
+                                    <li><a href="#">표준설비조회</a></li>
+                                    <li><a href="#">APP 모델 조회</a></li>
+                                    <li><a href="#">APP 수집 대상 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">표준화</a>
+                                <ul>
+                                    <li><a href="#">원본설비 표준설비 매핑조회</a></li>
+                                    <li><a href="#">표준태그 표준설비 매핑조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">저장</a>
+                                <ul>
+                                    <li><a href="#">APP 스키마 조회</a></li>
+                                    <li><a href="#">APP 스키마 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">발전운전</a>
+                                <ul>
+                                    <li><a href="#">원본태그관리</a></li>
+                                    <li><a href="#">표준태그관리</a></li>
+                                    <li><a href="#">표준태그생성</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">설비</a>
+                                <ul>
+                                    <li><a href="#">원본설비관리</a></li>
+                                    <li><a href="#">표준설비관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">표준화 매핑</a>
+                                <ul>
+                                    <li><a href="#">원본태그 표준태그 매핑</a></li>
+                                    <li><a href="#">원본설비 표준설비 매핑</a></li>
+                                    <li><a href="#">표준태그 표준설비 매핑</a></li>
+                                    <li><a href="#">공통-Legacy 모델 매핑</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">메타관리</a>
+                                <ul>
+                                    <li><a href="#">호기코드관리</a></li>
+                                    <li><a href="#">계통관리</a></li>
+                                    <li><a href="#">설비관리</a></li>
+                                    <li><a href="#">부가속성관리</a></li>
+                                    <li><a href="#">계측기관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">메타관리</a>
+                                <ul>
+                                    <li><a href="#">호기코드관리</a></li>
+                                    <li><a href="#">계통관리</a></li>
+                                    <li><a href="#">설비관리</a></li>
+                                    <li><a href="#">부가속성관리</a></li>
+                                    <li><a href="#">계측기관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">메타관리</a>
+                                <ul>
+                                    <li><a href="#">호기코드관리</a></li>
+                                    <li><a href="#">계통관리</a></li>
+                                    <li><a href="#">설비관리</a></li>
+                                    <li><a href="#">부가속성관리</a></li>
+                                    <li><a href="#">계측기관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">메타관리</a>
+                                <ul>
+                                    <li><a href="#">호기코드관리</a></li>
+                                    <li><a href="#">계통관리</a></li>
+                                    <li><a href="#">설비관리</a></li>
+                                    <li><a href="#">부가속성관리</a></li>
+                                    <li><a href="#">계측기관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">시스템 관리 </a>
+                        <p class="subname">시스템 관리<img src="../images/common/openmenu09.png" alt=""></p>
+                        <ul>
+                            <li><a href="#">모니터링</a>
+                                <ul>
+                                    <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                    <li><a href="#">Legacy스키마 조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연계 시스템 관리</a>
+                                <ul>
+                                    <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                    <li><a href="#">Legacy스키마 조회</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 주요메뉴 E -->
+            <!-- 메뉴전체보기 S -->
+            <div class="MenuAll">
+                <a class="MenuBtn" href="#">
+                    <span>메뉴열기</span>
+                </a>
+                <nav class="Menu">
+                    <ul>
+                        <li><a href="#">통합 대시보드</a>
+                            <ul>
+                                <li><a href="#">통합 대시보드</a></li>
+                                <li><a href="#">Topolgy</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">HMI 모니터링</a>
+                            <ul>
+                                <li><a href="#">HMI 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">데이터 조회</a>
+                            <ul>
+                                <li><a href="#">발전운전 데이터</a>
+                                    <ul>
+                                        <li><a href="#">데이터 조회</a></li>
+                                        <li><a href="#">실시간 태그 그래프 조회</a></li>
+                                        <li><a href="#">이력 태그 그래프 조회</a></li>
+                                        <li><a href="#">그룹데이터조회</a></li>
+                                        <li><a href="#">그룹별 그래프 조회</a></li>
+                                        <li><a href="#">분석데이터조회</a></li>
+                                        <li><a href="#">분석그래프조회</a></li>
+                                        <li><a href="#">이력데이터 쿼리조회</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">LEGACY 데이터</a>
+                                    <ul>
+                                        <li><a href="#">Legacy 수집목록 조회</a></li>
+                                        <li><a href="#">Legacy 데이터 조회</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">발전운전 데이터 분석</a>
+                            <ul>
+                                <li><a href="#">테그 그룹 등록</a></li>
+                                <li><a href="#">분석 대상 관리</a></li>
+                                <li><a href="#">분석 결과 조회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">데이터 분석 추출</a>
+                            <ul>
+                                <li><a href="#">대용량 데이터 추출 요청</a>
+                                    <ul>
+                                        <li><a href="#">실시간 제공 데이터</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">수집</a>
+                                    <ul>
+                                        <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                        <li><a href="#">Legacy스키마 조회</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">발전운전 데이터 관리</a>
+                            <ul>
+                                <li><a href="#">대용량 데이터 추출 요청</a></li>
+                                <li><a href="#">수집</a>
+                                    <ul>
+                                        <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                        <li><a href="#">Legacy스키마 조회</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Legacy 데이터 관리</a>
+                            <ul>
+                                <li><a href="#">대용량 데이터 추출 요청</a></li>
+                                <li><a href="#">수집</a>
+                                    <ul>
+                                        <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                        <li><a href="#">Legacy스키마 조회</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">설비 · APP 데이터 관리</a>
+                            <ul>
+                                <li><a href="#">대용량 데이터 추출 요청</a></li>
+                                <li><a href="#">수집</a>
+                                    <ul>
+                                        <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                        <li><a href="#">Legacy스키마 조회</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">시스템 관리 </a>
+                            <ul>
+                                <li><a href="#">대용량 데이터 추출 요청</a></li>
+                                <li><a href="#">수집</a>
+                                    <ul>
+                                        <li><a href="#">원본태그 표준태그 매핑조회</a></li>
+                                        <li><a href="#">Legacy스키마 조회</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- 메뉴전체보기 E -->
+
+        </header>
+
+        <div class="ContArea SubLayout">
+            <article class="LeftArea">
+                <h3>데이터 조회 <img src="../images/common/menuicon07.png" alt=""></h3> <!-- D: 이미지 01~ 12까지있음 골라서 쓰세요 -->
+                <nav class="SubMenu">
+                    <ul>
+                        <li class="M_on">
+                            <a href="#">발전운전데이터 </a>
+                            <ul class="leftmenu3dep">
+                                <li class="M_on"><a href="#">데이터 조회</a></li> <!-- D: 해당 메뉴 클릭시 li에 class="M_on" 추가 -->
+                                <li><a href="#">실시간 태그 그래프 조회</a></li>
+                                <li><a href="#">이력 태그 그래프 조회</a></li>
+                                <li><a href="#">그룹데이터조회</a></li>
+                                <li><a href="#">그룹별 그래프 조회</a></li>
+                                <li><a href="#">분석데이터조회</a></li>
+                                <li><a href="#">분석그래프조회</a></li>
+                                <li><a href="#">이력데이터 쿼리조회</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Legacy 수집</a>
+                            <ul>
+                                <li>
+                                    <a href="#">수집 대상 관리</a>
+                                </li>
+                                <li>
+                                    <a href="#">데이터 수립</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+
+            <article id="Cont" class="Cont">
+                <h4>데이터 조회</h4>
+                <div class="PageIndex">
+                    <a href="#">Home</a>
+                    <span>&gt;</span>
+                    <a href="#">데이터 수집</a>
+                    <span>&gt;</span>
+                    <a href="#">발전운전 수집</a>
+                    <span>&gt;</span>
+                    <a href="#">Adapter 등록 관리</a>
+                </div>
+
+                <!-- 상세검색 S -->
+                <fieldset class="Search">
+                    <legend class="Hidden">상세검색</legend>
+                    <table>
+                        <caption class="Hidden">검색-발전사, 발전본부, 발전소, 설비여부, 검색조건 제공</caption>
+                        <tbody>
+                            <tr>
+                                <th><label for="">발전사</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                                <th><label for="">발전본부</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                                <th><label for="">발전소</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                                <th><label for="">호기</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="">설비여부</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                                <th><label for="">검색조건</label></th>
+                                <td>
+                                    <select id="">
+                                        <option>한국중부발전</option>
+                                    </select>
+                                </td>
+                                <th><label for="">검색어</label></th>
+                                <td colspan="3">
+                                    <input id="" type="text">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="" class="BtnSearch" type="button">검색</button>
+                </fieldset>
+                <!-- 상세검색 E -->
+                <!-- 조회내용 S -->
+                <div class="rowline"> <!-- :D colline 아래 박스 추가시 세로정렬 rowline로 바꿀시 가로정렬-->
+                    <div class="GridArea w70"> <!-- :D 박스추가시  <div class="GridArea">  </div>만 추가해주세요 -->
+                        <h5>조회목록</h5>
+                        <button type="button" class="remoteBtn">원격접속</button>
+                        <div class="btn_right">
+                            <button type="button" class="addBtn">추가</button>
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
+                        <div class="Gridtable">
+                            <table>
+                                <caption class="Hidden">검색-발전사, 발전본부, 발전소, 설비여부, 검색조건 제공</caption>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>분석명</th>
+                                        <th>분석시작일자</th>
+                                        <th>분석종료일자</th>
+                                        <th>수행일시</th>
+                                        <th>수행구분</th>
+                                        <th>수행여부</th>
+                                        <th>수행주기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>test</td>
+                                        <td>2021-06-15</td>
+                                        <td>2021-06-15</td>
+                                        <td>2021-06-15</td>
+                                        <td>주기실행</td>
+                                        <td></td>
+                                        <td>1시간</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="Paging">
+                            <!-- D:이전 다음 페이지 없을 경우. a 태그에 class off 추가 -->
+                            <a href="#" class="BtnFirst off">처음으로</a>
+                            <a href="#" class="BtnForward off">이전</a>
+                            <div class="No_PC">
+                                <a href="#" class="M_on">1</a><!-- D:선택된 페이지 번호에 class="M_on" -->
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                            </div>
+                            <a href="#" class="BtnNext">다음</a>
+                            <a href="#" class="BtnLast">맨끝으로</a>
+                        </div>
+                    </div>
+                    <div class="GridArea">
+                        <!-- :D 박스추가시  <div class="GridArea">  </div>만 추가해주세요 ▥ 이런 레이아웃이됨 -->
+                        <h5>조회목록</h5>
+                        <button type="button" class="remoteBtn">원격접속</button>
+                        <div class="btn_right">
+                            <button type="button" class="addBtn">추가</button>
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
+                        <div class="Gridtable">
+                            <table>
+                                <caption class="Hidden">검색-발전사, 발전본부, 발전소, 설비여부, 검색조건 제공</caption>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>분석명</th>
+                                        <th>분석시작일자</th>
+                                        <th>분석종료일자</th>
+                                        <th>수행일시</th>
+                                        <th>수행구분</th>
+                                        <th>수행여부</th>
+                                        <th>수행주기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>test</td>
+                                        <td>2021-06-15</td>
+                                        <td>2021-06-15</td>
+                                        <td>2021-06-15</td>
+                                        <td>주기실행</td>
+                                        <td></td>
+                                        <td>1시간</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="Paging">
+                            <!-- D:이전 다음 페이지 없을 경우. a 태그에 class off 추가 -->
+                            <a href="#" class="BtnFirst off">처음으로</a>
+                            <a href="#" class="BtnForward off">이전</a>
+                            <div class="No_PC">
+                                <a href="#" class="M_on">1</a><!-- D:선택된 페이지 번호에 class="M_on" -->
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                            </div>
+                            <a href="#" class="BtnNext">다음</a>
+                            <a href="#" class="BtnLast">맨끝으로</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 조회내용 E -->
+            </article>
+        </div>
+        <footer>
+            <img src="../images/common/footer_logo.png" alt="KEPCO">
+        </footer>
+    </div>
+
+</body>
+
+</html>

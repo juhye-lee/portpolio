@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.first-map .drag-upload-frame {width:calc(100% - 70px);height:calc(100% - 55px);position:absolute;box-sizing:border-box;font-size:13px;top: 55px;right: 0px;}
+
+.second-map:first-child .drag-upload-frame { width: calc(100% - 66px); height: calc(100%);  position: absolute; box-sizing: border-box; left: 67px;}
+.second-map:nth-child(2) .drag-upload-frame {width:calc(100%);height:calc(100%);position:absolute;box-sizing:border-box;}
+
+.fourth-map:first-child .drag-upload-frame { width: calc(100% - 66px);height:100%;position:absolute;box-sizing:border-box;left: 67px;}
+.fourth-map:nth-child(2) .drag-upload-frame {width:100%;height:100%;position:absolute;box-sizing:border-box;}
+.fourth-map:nth-child(3) .drag-upload-frame {width: calc(100% - 66px);height:100%;position:absolute;box-sizing:border-box;left: 67px;}
+.fourth-map:nth-child(4) .drag-upload-frame {width:100%;height:100%;position:absolute;box-sizing:border-box;}
+
+.drag-upload-frame.over {border:20px solid rgba(255,0,0,.5);z-index: 60;background: rgba(0,0,0,0.8);}
+.drag-upload-frame.over .filedrag{color: #FFE; position: absolute;top: 50%;left: 50%; transform: translate(-50%,-50%);background: url(../../../images/sub/filedrag.png) no-repeat center top 15px; padding-top: 95px; font-size: 18px;}
+.drag-upload-frame .progressBar {width:200px;height:22px;border:1px solid #ddd;border-radius: 5px; overflow: hidden;display:inline-block;margin:0px 10px 5px 5px;vertical-align:top}
+.drag-upload-frame .progressBar div {height:100%;color:#fff;text-align:center;line-height:22px;width:0;background-color:#0ba1b5;border-radius:3px}
+/* .drag-upload-frame .statusbar.ing {width:636px;} */
+/* .drag-upload-frame .statusbar{border-top:1px solid #A9CCD1;min-height:25px;width:590px;padding:10px 10px 0px 10px;vertical-align:top;position: absolute;left:50%;margin-left:-300px;z-index:1;} */
+.drag-upload-frame .statusbar{border-top:1px solid #A9CCD1;width:300px;height:100px;position: absolute;left:50%;margin-left:-150px;z-index:1;border-radius: 5px;}
+/* .drag-upload-frame .statusbar:nth-child(odd){background:#EBEFF0;} */
+/* .drag-upload-frame .statusbar{background:#EBEFF0} */
+.drag-upload-frame .statusbar{background:#fff}
+.drag-upload-frame .filename{display:inline-block;vertical-align:top;width:250px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;padding-top:10px}
+.drag-upload-frame .filesize{display:inline-block;vertical-align:top;color:#30693D;width:100px;margin-left:10px;margin-right:5px;}
+.drag-upload-frame .abort{background-color:#A8352F;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;display:inline-block;color:#fff;font-size:13px;font-weight:normal;padding:1px 15px;cursor:pointer;vertical-align:top;height: 22px;}
+
+.drag-upload-frame .loading{width:24px;height:24px;display:none}
+.drag-upload-frame .loading > span{width:24px;height:24px;background:#ffffff url(/images/apfs/common/loading-indicator.gif) center center no-repeat;background-size:20px 20px;animation: drag-loading 1250ms infinite linear;transform: translateZ(0);display:inline-block}
+
+.drag-upload-frame .columnselect {width:300px;}
+.drag-upload-frame .delimiterselect {width:230px;}
+.drag-upload-frame .delimiterselect label{font-size: 14px; font-weight: bold; border-bottom: 1px solid #ddd;padding-bottom: 10px;display: block;margin-bottom: 10px;}
+.drag-upload-frame .saveshapediv {width:240px;z-index:99}
+.drag-upload-frame .saveshapediv > p:first-child{text-align: center;font-size: 14px; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; font-weight: bold; color: #262627;}
+.drag-upload-frame .columnselect,.drag-upload-frame .delimiterselect,.drag-upload-frame .saveshapediv {background-color:#fff;left:50%;position:absolute;margin-left:-150px;padding:10px;border: 1px #e0e0e0 solid;}
+.drag-upload-frame .columnselect,.drag-upload-frame .delimiterselect,.drag-upload-frame .saveshapediv p:nth-child(2){display:inline-block;margin: 0px 5px 15px 5px;font-weight:bold;color: #1f1faf;}
+.drag-upload-frame .columnselect,.drag-upload-frame .delimiterselect,.drag-upload-frame .saveshapediv p:nth-child(3){display:inline-block;margin: 0px 5px 15px 5px;font-weight:bold;color: #c50d0d;}
+.drag-upload-frame .columnselect button:first-child,.drag-upload-frame .delimiterselect button:first-child,.drag-upload-frame .saveshapediv button:first-child {margin-right:3px}
+
+.drag-upload-frame .columnselect button,.drag-upload-frame .delimiterselect button,.drag-upload-frame .saveshapediv button, .drag-upload-frame .columnselect ul > li{cursor:pointer}
+
+.drag-upload-frame .columnselect ul,.drag-upload-frame .delimiterselect ul {border: 1px solid #ddd;margin: 10px 0;max-height: 300px;overflow-y: auto}
+.drag-upload-frame .columnselect ul li.on,.drag-upload-frame .columnselect ul li:hover {background-color: #156bd3;color: #f9f9fa}
+
+.drag-upload-frame .delimiterselect .delimiter {width:100%}
+.drag-upload-frame .delimiterselect > div {padding:10px 0}
+
+#drag-upload-popup {padding-top:22px}
+#drag-upload-popup table{table-layout:fixed}
+#drag-upload-popup table td {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+#drag-upload-popup div {max-height: 300px;overflow-y: auto}
+
+@keyframes drag-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+.mapbtn_B{ color: #fff; background: #04358f ; padding:4px 7px 4px 7px; border-radius: 5px; min-width: 60px;}
+.mapbtn_G{ color: #fff; background: #626262 ; padding:4px 7px 4px 7px; border-radius: 5px; min-width: 60px;}
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>GIS</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/gis-layout.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/stellarnav.min.js"></script>
+    
+
+    
+    <script type="text/javascript">
+        
+    $(document).ready(function() {
+        $('.MapWrap').css('width',$(window).width()-331);
+    
+        var handle = $( "#custom-handle" );
+        $( ".sliderUI" ).slider({
+            create: function() {
+                handle.text( $( this ).slider( "value" ) );
+            },
+            slide: function( event, ui ) {
+                handle.text( ui.value );
+            }
+        });
+        
+        $('.stellarnav').stellarNav({
+            theme: 'plain',
+            breakpoint: 0
+        });
+        //탭
+         $('.lnbtab li a').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('.lnbtab li a').removeClass('on');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('on');
+            $("#"+tab_id).addClass('current');
+        });
+        
+    });
+        
+    $( window ).resize( function() {
+   $('.MapWrap').css('width',$(window).width()-331);
+    } );
+    
+    </script>
+</head>
+<body>
+    <div id="skipnavigation"> <a href="">본문으로 바로가기</a> <a href="">메뉴로 바로가기</a> </div>
+    
+    <div class="top">
+        <div class="top_menu">
+            <ul class="topright">
+                <li><a href="#"><img src="image/topHome.png"></a></li>
+                <li><a href="#" class="login">로그인</a></li>
+                <li><a href="#"><span class="userneme">시스템관리자</span>님 환영합니다.</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="top-menu">
+    <div id="top-wrap">
+		<div class="loc-title">
+			<h1><a href="#"><img src="image/menuLogo.png" alt="로고"></a></h1>
+		</div>
+		<div class="stellarnav">
+			<ul>
+				<li><a href="" class="on">menu01</a>
+					<ul id="submneu_01">
+						<li><a href="">menu01-01</a></li>
+					</ul>
+				</li>
+				<li><a href="">menu02</a>
+					<ul id="submneu_02">
+						<li><a href="">menu02-01</a></li>
+					</ul>
+				</li>
+				<li><a href="">menu03</a>
+					<ul id="submneu_03">
+						<li><a href="">menu03-01</a></li>
+					</ul>
+				</li>
+				<li><a href="">menu04</a>
+					<ul id="submneu_04">
+						<li><a href="">menu04-01</a></li>
+					</ul>
+				</li>
+				<li><a href="">menu05</a>
+					<ul id="submneu_05">
+						<li><a href="">menu05-01</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="">menu06</a>
+					<ul id="submneu_06">
+						<li><a href="">menu06-01</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+    </div>
+    <div class="con_wrap">
+       <div class="lnbWrap">
+            <ul class="lnbtab">
+              <li ><a href="#" title="" class="on" data-tab="tab-1" >지도검색</a>
+              </li>
+              <li><a href="#" title="" data-tab="tab-2">레이어</a>
+              </li>
+            </ul>
+            <!--지도검색 컨텐츠-->
+            <div class="mapSearch tab-content current" id="tab-1">
+                <h4>검색조건</h4>
+                <div class="mapSearchcon">
+                  <div class="radio">
+                      <input type="radio" name="map" value="ch01" id="map01" checked="checked"> 
+                      <label for="map01" class="radio_ch"><span>인허가번호</span></label>
+                      <input type="radio" name="map" value="ch01" id="map02"> 
+                      <label for="map02" class="radio_ch"><span>주소</span></label>
+                      <input type="radio" name="map" value="ch01" id="map03"> 
+                      <label for="map03" class="radio_ch"><span>유역</span></label>
+                      
+                       <input type="radio" name="map" value="ch01" id="map04"> 
+                      <label for="map04" class="radio_ch"><span>수허가자</span></label>
+                      
+                      <input type="radio" name="map" value="ch01" id="map05"> 
+                      <label for="map05" class="radio_ch "><span>지명 및 상호</span></label>
+                    </div>
+                 <input title="검색어 입력" type="text" class="searchinput"><button class="btn_search">조회</button>
+                 </div>
+                <h4>검색결과</h4>
+                <div class="result">
+                    <table>
+                      <colgroup>
+                          <col width="35%">
+                          <col width="65%">
+                      </colgroup>
+                       <thead> 
+                            <tr>
+                                <th>코드</th>
+                                <th>호공</th>
+                            </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                           <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                           <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                           <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                            <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                            <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                            <tr>
+                               <td>W201720006</td>
+                               <td>삼달신산지구 2호공</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--레이어 컨텐츠-->
+            <div class="layerWrap tab-content " id="tab-2">
+                <ul class="layer">
+                    <li><a href="#">주제도</a>
+                        <ul><li>
+                                <input type="checkbox" id="a1" name="" class="levelno"/>
+                                <label for="a1"><span>법정읍면동경계</span></label>
+                                <i class="colorbox lavel2a"> 
+                                </i>
+                                <div  class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <input type="checkbox" id="a2" name="" class="levelno"/>
+                                <label for="a2"><span>연속지적도</span></label>
+                                <i class="colorbox lavel2b"></i>
+                                <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <input type="checkbox" id="a3" name="" class="levelyes"/>
+                                <label for="a3" class="lavelneme"><span>절대상대보전지역</span></label >
+                                    <ul class="lastlavel">
+                                        <li> <input type="checkbox" id="a3-1" name="" class="levelno"/>
+                                            <label for="a3-1"><span>절대보전지역</span></label>
+                                         <i class="colorbox lavel3a"></i>
+                                           <div class="sliderbox sliderUI">
+                                      <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                        </li>
+                                        <li><input type="checkbox" id="a3-2" name="" class="levelno"/>
+                                            <label for="a3-2"><span>상대보전지역</span></label>
+                                         <i class="colorbox lavel3b"></i>
+                                           <div class="sliderbox sliderUI">
+                                      <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div></li>
+                                </ul>
+                            </li>
+                            <li>
+                               <input type="checkbox" id="a4" name="" class="levelyes"/>
+                                <label for="a4" class="lavelneme"><span>생태계보전지구</span></label >
+                                <ul class="lastlavel">
+                                    <li> <input type="checkbox" id="a4-1" name="" class="levelno"/>
+                                        <label for="a4-1"><span>1등급</span></label>
+                                     <i class="colorbox lavel3a"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                    <li><input type="checkbox" id="a4-2" name="" class="levelno"/>
+                                        <label for="a4-2"><span>2등급</span></label>
+                                     <i class="colorbox lavel3b"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                </div></li>
+                                <li> <input type="checkbox" id="a4-3" name="" class="levelno"/>
+                                        <label for="a4-3"><span>3등급</span></label>
+                                     <i class="colorbox lavel3c"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                    <li> <input type="checkbox" id="a4-4" name="" class="levelno"/>
+                                        <label for="a4-4"><span>4등급</span></label>
+                                     <i class="colorbox lavel3d"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                <li> <input type="checkbox" id="a4-5" name="" class="levelno"/>
+                                        <label for="a4-5"><span>4-1등급</span></label>
+                                     <i class="colorbox lavel3e"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                    <li> <input type="checkbox" id="a4-6" name="" class="levelno"/>
+                                        <label for="a4-6"><span>4-2등급</span></label>
+                                     <i class="colorbox lavel3f"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                    <li> <input type="checkbox" id="a4-7" name="" class="levelno"/>
+                                        <label for="a4-7"><span>5등급</span></label>
+                                     <i class="colorbox lavel3g"></i>
+                                       <div class="sliderbox sliderUI">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+       <div class="MapWrap">
+             <div class="top">
+                 <ul class="tab">
+                     <li class="on"><a href="#">영역검색</a></li>
+                     <li><a href="#">영향반경</a></li>
+                     <li><a href="#">개발가능량</a></li>
+                     <li><a href="#">360도정지영상</a></li>
+                 </ul>
+                 <button class="btn_backmap">배경지도</button>
+             </div>
+             <div class="Map">
+                 <img src="image/map.png" width="100%" alt="지도이미지 지우세요" />
+             </div>  
+      </div>
+      
+    
+    </div>  
+    <footer>
+		<div class="fcont">
+            <div class="fconlogo"><img src="image/footerlogo.png" alt="푸터 로고"></div>
+            <div class="styled-select">
+                <form action="#">
+                    <fieldset>
+                        <legend>- 관련기관</legend>
+                        <label for="local-center">- 관련기관</label>
+                        <select id="local-center">
+                            <option>- 관련기관</option>
+                            <option>관련기관1</option>
+                            <option>관련기관2</option>
+                            <option>관련기관3</option>
+                            <option>관련기관4</option>
+                        </select>
+                    </fieldset>
+               </form>
+           </div>
+            <ul class="fcontent">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">전화번호 안내</a></li>
+            
+            </ul>
+            <address>
+            제주특별자치도 제주시 문연로 30(연동 322-1) TEL. 064.710.6432 | FAX. 064.710.6439<br />
+            <span>OPYRIGHT ⓒ 2018 제주특별자치도 환경자산물관리과. ALL RIGHT RESERVED</span>
+            </address>
+			
+
+		</div>
+	</footer>
+    
+ 
+	
+
+
+      
+ 
+
+</body>
+</html>

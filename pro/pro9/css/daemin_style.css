@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+section.sub_contWrap {width:100%; padding:0 0 43px; overflow:hidden; background:#fff; border-top: 1px solid #ededed;} 
+section.sub_contWrap .sub_container { width:1166px; margin:0 auto; overflow:hidden; position:relative;}
+
+.lnbWrap{width:202px; float:left;}
+.lnbWrap .lnbTop{background: url(../image/sub/leftBg.png) no-repeat 0 0; display:block; width:202px; height:109px; line-height:109px; color:#fff; text-align:center;}
+.lnbWrap .lnbTop h2 { font-size:22px; font-weight:600; text-shadow: 0 0 2px #000; -moz-text-shadow: 0 0 2px #000; -webkit-text-shadow: 0 0 2px #000; margin-top: 53px;}
+.lnbWrap ul li {width: 100%;}
+.lnbWrap ul li a{color: #373737; font-size: 16px; padding-left: 25px; line-height: 51px;  display: inline-block;border-bottom: 1px solid #e5e5e5;width:177px; }
+.lnbWrap ul li a:hover{font-weight: 600;}
+.lnbWrap ul .on {color: #000; font-weight: 600; border-bottom: 2px solid #3e61b2; background: url(../image/sub/leftOnbullet.png) no-repeat 168px 25px;}
+.lnbWrap ul .lnbsubMenu{padding-top: 10px;}
+.lnbWrap ul .lnbsubMenu li a{ color:#3f4251; font-size: 14px; line-height:30px; border: none;background: url(../image/sub/subMenubullet.png) no-repeat 25px 15px; padding-left: 35px;}
+.lnbWrap ul .lnbsubMenu li:last-child a{border-bottom: 1px solid #e5e5e5; padding-bottom: 10px;}
+.lnbsubMenu .subOn{color:#3e61b2!important;font-weight: 600;}
+
+.contentsRight {width:894px; float:right;}
+.contentsRight .contentTop{width: 100%; border-bottom: 1px solid #dcdcdc; overflow: hidden;}
+.contentsRight .breadcrumb{line-height: 53px; float: left;}
+.contentsRight .breadcrumb li{float: left;background: url(../image/sub/arrow.png) no-repeat 0px 21px;}
+.contentsRight .breadcrumb li a{padding: 0px 12px; color:#676767;font-size: 13px;}
+.contentsRight .breadcrumb li:first-child{background: none;}
+.contentsRight .breadcrumb li:first-child a{background: url(../image/sub/home.png) no-repeat 0px 21px; text-indent: -99999em; display: block;}
+.contentsRight .function{float:right;} 
+.contentsRight .function li{float:left;}
+.contentsRight .function li a {width: 27px; height: 27px; display: block; text-indent: -99999em; margin-top:12px;}			
+	.print{background: url(../image/sub/print.png) no-repeat 0px 0px; margin-right: 5px;}			
+	.share{background: url(../image/sub/share.png) no-repeat 0px 0px;}
+
+.contentsRight h3{color:#000; font-size:34px; margin-top:20px;font-weight:600;}
+.contentsRight .explanation{color:#525252; line-height: 24px;margin: 20px 0px; }
+
+	.al_center { text-align:center;}
+
+.contentsRight h4{font-size:18px; color:#000; font-weight:600; padding-bottom:18px; background: url(../image/sub/conBullet.png) no-repeat 0px 40px; margin-bottom: 20px; margin-top:42px;}
+	
+	/*민원분야선택*/	
+	.civilcheck_box { width:100%; position:relative; border:1px solid #ebebeb; box-sizing:border-box; overflow:hidden}	
+	.civilcheck_box ul {overflow:hidden}	
+	.civilcheck_box ul li {float:left; width:20%; text-align:center; vertical-align:top; position:relative; border-bottom:1px solid #ebebeb}	
+	.civilcheck_box ul li:after { content: ''; display:block; position:absolute; top:0; right:0; height:121px; border-right:1px solid #ebebeb}	
+	.civilcheck_box ul li a {display:block; color:#4a4a4a; padding:28px 0 20px;}	
+	.civilcheck_box ul li a:hover { background:#f1f4fc;}	
+	.civilcheck_box ul li a:before {content: ''; display:block; width:57px; height:54px; margin:0 auto; background-repeat:no-repeat; background-position:center center; transition:all .2s ease}
+		.civilcheck_box ul li.nth01 a:before {background-image: url(../image/sub/ico_civil01.png)}	
+		.civilcheck_box ul li.nth02 a:before {background-image: url(../image/sub/ico_civil02.png)}	
+		.civilcheck_box ul li.nth03 a:before {background-image: url(../image/sub/ico_civil03.png)}	
+		.civilcheck_box ul li.nth04 a:before {background-image: url(../image/sub/ico_civil04.png)}	
+		.civilcheck_box ul li.nth05 a:before {background-image: url(../image/sub/ico_civil05.png)}	
+		.civilcheck_box ul li.nth06 a:before {background-image: url(../image/sub/ico_civil06.png)}	
+		.civilcheck_box ul li.nth07 a:before {background-image: url(../image/sub/ico_civil07.png)}	
+		.civilcheck_box ul li.nth08 a:before {background-image: url(../image/sub/ico_civil08.png)}	
+		.civilcheck_box ul li.nth09 a:before {background-image: url(../image/sub/ico_civil09.png)}	
+		.civilcheck_box ul li.nth10 a:before {background-image: url(../image/sub/ico_civil10.png)}	
+		.civilcheck_box ul li.nth05:after,	
+		.civilcheck_box ul li.nth10:after {display: none}	
+		.civilcheck_box ul li.nth06,		
+		.civilcheck_box ul li.nth07,	
+		.civilcheck_box ul li.nth08,	
+		.civilcheck_box ul li.nth09,	
+		.civilcheck_box ul li.nth10 { border-bottom:0;}		
+		
+		/*상세분야선택*/	
+		.civilcheck_box02 { width:100%; position:relative; border:1px solid #ebebeb; box-sizing:border-box; overflow:hidden}	
+		.civilcheck_box02 ul {overflow:hidden}	
+		.civilcheck_box02 ul li {float:left; width:20%; text-align:center; vertical-align:top; position:relative;}	
+		.civilcheck_box02 ul li:after { content: ''; display:block; position:absolute; top:0; right:0; height:63px; border-right:1px solid #ebebeb}	
+		.civilcheck_box02 ul li a {display:block; color:#4a4a4a; padding:22px 0;}	
+		.civilcheck_box02 ul li a:hover { background:#3e61b2; color:#fff;}	
+		.civilcheck_box02 ul li.br_none:after {display: none}	
+		.civilcheck_box02.mrt_none { margin-top:-1px;}	
+		
+		 /*	테이블 스타일*/	
+		.tableType01 {display:block; margin:0; position:relative; }
+		.tableType01 p { font-size:14px; color:#000; letter-spacing:0; padding-bottom:8px;}
+		.tableType01 table {width:100%;}
+		.tableType01 table th,td { font-size:15px; padding:15px; border-right:1px solid #cccccc; word-break:keep-all; text-align:center;}
+		.tableType01 table th:last-child,td:last-child {border-right:none;}
+		.tableType01 table th { border-top: 2px solid #555555; border-bottom:1px solid #555555; color:#000; background:#fcfcfc; }
+		.tableType01 table td { font-weight:400; color:#525252; border-bottom:1px solid #cccccc;}
+		.tableType01 table .al_left { text-align:left !important;}
+
+		.pagination {display:inline-block;padding-left:0;margin:20px 0;}
+		.pagination>li {display:inline;}
+		.pagination>li>a, 
+		.pagination>li>span {position:relative;float:left;  margin:0 1px; width:28px; height:28px; line-height:27px; color:#808080;text-decoration:none;background-color:#fff;border:1px solid #ddd; box-sizing:border-box;}
+		.pagination>li.first_arrow a { background:url(../image/sub/ico_first.png) no-repeat center;}
+		.pagination>li.pre_arrow a { background:url(../image/sub/ico_pre.png) no-repeat center;}
+		.pagination>li.last_arrow a { background:url(../image/sub/ico_last.png) no-repeat center;}
+		.pagination>li.next_arrow a { background:url(../image/sub/ico_next.png) no-repeat center;}
+		.pagination>li.first_arrow a,
+		.pagination>li.pre_arrow a,
+		.pagination>li.last_arrow a,
+		.pagination>li.next_arrow a { text-indent:-99999em;}
+		.pagination>li.first_arrow a:hover,
+		.pagination>li.pre_arrow a:hover,
+		.pagination>li.last_arrow a:hover,
+		.pagination>li.next_arrow a:hover { background-color:#ddd;}
+		.pagination>li>a:focus, 
+		.pagination>li>a:hover {z-index:3; color:#fff; background-color:#153275; border-color:#ddd}
+		.pagination>.active>a, 
+		.pagination>.active>a:focus, 
+		.pagination>.active>a:hover {z-index:2;color:#fff;cursor:default;background-color:#153275;}
+		

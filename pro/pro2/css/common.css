@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* base */
+html, body {min-width:1200px; position:relative;}
+* { box-sizing:border-box; font-size:14px; color:#555; font-family:'MalgunGothic', '맑은 고딕', 'AppleSDGothicNeo', sans-serif; }
+
+a, button { cursor:pointer; background:none; border:none; padding:0; margin:0; vertical-align: middle; transition-duration: 0.1s;  word-break:keep-all; text-decoration: none;box-sizing:border-box; color:#555;}
+
+body { overflow-x:hidden;}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, del, dfn, em, font, img, ins, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,  table, caption, tbody, tfoot, thead, tr, th, td, br {margin: 0; padding: 0; border:0;  line-height: 1.5em; word-break:keep-all;  font-weight:normal; }
+
+
+
+input, select { margin:0; box-sizing:border-box;}
+
+article, section, header, footer, aside { display:block;}
+
+li {list-style:none;}
+p {text-align:left;}
+
+h1, h2, h3, h4, h5, h6, h7 { clear:both;}
+
+
+.Hidden {visibility:hidden !important; overflow:hidden !important; width:0 !important; height:0 !important; font-size:0 !important; line-height:0 !important; position:absolute !important; padding:0 !important;}
+
+textarea, textarea:hover, textarea:active, textarea:visited { padding:0; margin:0; color:#555;  vertical-align: middle;}
+
+img { vertical-align:middle; }
+
+
+
+/* common */
+.SkipNav {position:absolute; left:0; top:0; z-index:11;}
+.SkipNav a { position:absolute; top:-40px; left:0; width:0; height:0; font-size:0; white-space: nowrap; display:block;}
+.SkipNav a:focus {top:0; display:block; width:auto; height:40px; line-height:40px; background:rgba(0, 0, 0, 0.8); color:#fff; padding:0 15px; font-size:14px;}
+
+header { position:absolute; left:0; top:0; width:100%; min-height:148px; background:#fff; z-index:10;}
+header h1 { position:absolute; left:calc(50% - 600px); top:70px;}
+header .BtnMenuAll {position:absolute; right:calc(50% - 600px); top:80px;}
+
+.Topmenu {background:rgba(0, 0, 0, 0.54); height:40px; width:100%; padding-right:calc(50vw - 600px); position:absolute; left:0; top:0; text-align:right;}
+.Topmenu a { display:inline-block; color:#fff; font-size:13px; line-height:40px; padding:0 14px 0 8px; background: url(../images/common/topmenu_line.png) no-repeat right center;}
+.Topmenu a:last-child { background:none; padding-right:0;}
+
+header nav.GNB { position:relative;  margin-top:40px; padding-left:calc(50% - 200px); overflow:hidden;transition-duration: 0.1s; }
+header nav.GNB:before, header nav.GNB:after { content:''; display:block; position:absolute; top:107px; border-bottom:#d9d9d9 solid 1px; border-top:#d9d9d9 solid 1px; background:#f4f4f4; height:270px; box-sizing: border-box; z-index:1;}
+header nav.GNB:before { left:0; width:calc(50% - 200px);}
+header nav.GNB:after { right:0; width:calc(50% - 400px);}
+header nav.GNB > ul {  padding-top:40px; overflow:hidden; text-align:center; float:left; z-index:2; height:108px; transition-duration: 0.1s;}
+header nav.GNB > ul:hover, header nav.GNB > ul.M_on { height:auto; }
+header nav.GNB > ul>li>a { display:block; line-height:40px; font-size:20px; font-weight:bold; letter-spacing: -1px; color:#444; margin-bottom:27px;}
+header nav.GNB > ul>li>a:hover, header nav.GNB > ul>li>a:focus, header nav.GNB > ul>li:hover >a, header nav.GNB > ul>li:focus>a {color:#000;}
+header nav.GNB > ul>li { display:inline-block; float:left; width:150px; position:relative; vertical-align:top;transition-duration: 0.1s;}
+header nav.GNB > ul>li ul {border-right:#d9d9d9 solid 1px; display:block; background:#f4f4f4; height:270px; border-top:#d9d9d9 solid 1px; border-bottom:#d9d9d9 solid 1px; position:relative; padding-top:15px; transition-duration: 0.1s;}
+header nav.GNB > ul>li ul a {display:block;  line-height:30px; margin:3px 0; color:#666;}
+header nav.GNB > ul>li ul a:hover, header nav.GNB > ul>li ul a:focus, header nav.GNB > ul>li ul li.M_on a { color:#333;} 
+header nav.GNB > ul>li ul li.M_on a {font-weight:bold;}
+header nav.GNB > ul>li ul li.M_on a:before { content:'- '; margin-left:-10px;}
+header nav.GNB > ul>li:first-child ul {border-left:#d9d9d9 solid 1px;}
+header nav.GNB > ul>li.M_on ul:before { content:''; display:block; width:calc(100% + 2px); height:3px; background:#36c; position:absolute; left:-1px; top:-2px;}
+header nav.GNB > ul>li:hover ul, header nav.GNB > ul>li:focus ul, header nav.GNB > ul>li.M_on ul { background:#fff;}
+
+.MenuAll {height:0; width:0; position:absolute; overflow:hidden;}
+.MenuAll.Open { position:fixed; background:rgba(0, 0, 0, 0.8); width:100%; height:100vh; left:0; top:0; z-index:100; overflow:auto; padding-left:calc(50% - 600px); padding-top:35px; }
+.MenuAll.Open h2 { width:1200px; background:#fff; padding:40px; padding-bottom:0; font-size:24px; color:#000; font-weight:bold; letter-spacing: -2px;}
+.MenuAll.Open .MenuList { background:#fff; width:1200px; padding:40px; padding-top:30px; padding-bottom:50px; }
+.MenuAll.Open .MenuList dl { border-bottom:#ddd solid 1px; padding:13px 0 0 195px; position:relative;}
+.MenuAll.Open .MenuList dl:first-child {border-top:#759bca solid 3px;}
+.MenuAll.Open .MenuList dl dt { font-size:20px; color:#456e9c; font-weight:bold; position:absolute; left:40px; top:25px;}
+.MenuAll.Open .MenuList dl dd {}
+.MenuAll.Open .MenuList dl dd>ul {overflow:auto;}
+.MenuAll.Open .MenuList dl dd>ul>li { width:calc(25% - 10px); float:left; margin-left:10px; border:#ddd solid 1px;  margin-bottom:13px;}
+.MenuAll.Open .MenuList dl dd>ul>li>a {display:block; text-align:center; line-height:45px; font-weight:bold; color:#333; font-size:16px; font-weight:bold; }
+.MenuAll.Open .MenuList dl dd>ul>li ul {background:#f4f4f4; padding:10px;}
+.MenuAll.Open .MenuList dl dd>ul>li ul li a { display:block; line-height:30px; text-align:center;}
+.MenuAll.Open .BtnClose { position:absolute; right:calc((100% - 1200px )/2 + 40px); top:80px;}
+
+footer { clear:both; background:#434c5f;  padding-left:calc(50vw - 600px); padding-right:calc(50vw - 600px); color:#fff; position:relative; padding-bottom:50px; }
+footer a { color:#fff; margin-right:20px;}
+footer .FooterMenu {display:block; border-bottom:#5e6576 solid 1px; height:73px; padding-top:25px; margin-bottom:30px; }
+footer .FooterMenu li {position:relative; display:inline-block; height:auto;}
+footer .FooterMenu li:before { content:'ㆍ'; color:rgba(255, 255, 255, 0.7); display:block; position:absolute; right:2px; top:3px;}
+footer .FooterMenu li:last-child:before { font-size:0;}
+
+footer .GoSite {position:absolute; right:calc(50vw - 600px); top:18px; padding-right:68px;}
+footer .GoSite select {height:36px; width:276px; background:#969eaf; border:none; padding-left:10px;}
+footer .GoSite select option {background:#fff;  }
+footer .GoSite button { height:36px; width:68px; background:#000; color:#fff; position:absolute; right:0; top:0;}
+footer address { font-style: normal; font-size:13px; color:#fff;}
+footer address span {display:block; color:#8a91a1; padding-top:25px;}
+footer .Contact {position:absolute; right:calc(50vw - 600px); top:100px; font-size:16px; text-align:right; color:#fff;}
+footer .Contact a {margin-right:0;}
+footer .Contact img {margin:0 10px 0 15px;}
+
+@media (max-width:1200px) {
+	
+	body { overflow-x:auto;}
+	header nav.GNB { padding-left:400px;}
+	header nav.GNB:before { width:400px;}
+    header nav.GNB:after { width:200px;}
+	.MenuAll.Open {padding-left:0;}
+	.MenuAll.Open h2, .MenuAll.Open .MenuList {width:100%;}
+	.MenuAll.Open .BtnClose {right:40px;}
+	footer {padding-left:0; padding-right:0;}
+	footer .GoSite { right:0;}
+	footer .Contact {right:0;}
+}
+@media (min-width:1400px) {
+	
+}
+

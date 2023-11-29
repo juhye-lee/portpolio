@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* SubPage */
+
+
+@import url(common.css);
+@import url(contents.css);
+@import url(board.css);
+@import url(main.css);
+
+.SubArea { width:1200px; margin:0 auto; padding-top:148px; z-index:1; margin-bottom:100px; float:left; margin-left:calc(50vw - 600px);}
+.SubArea>h2.Sub01 {background-image:url("../images/sub/img_bg_pattern.png"), url("../images/sub/subimg_01.png");} /* 통계서비스 */
+.SubArea>h2.Sub02 {background-image:url("../images/sub/img_bg_pattern.png"), url("../images/sub/subimg_02.png");} /* 통계정보 */
+.SubArea>h2.Sub03 {background-image:url("../images/sub/img_bg_pattern.png"), url("../images/sub/subimg_03.png");} /* 게시판 */
+.SubArea>h2.Sub04 {background-image:url("../images/sub/img_bg_pattern.png"), url("../images/sub/subimg_04.png");} /* 시스템소개 */
+.SubArea>h2.Sub05 {background-image:url("../images/sub/img_bg_pattern.png"), url("../images/sub/subimg_05.png");} /* 마이페이지 */
+.SubArea>h2 { color:#000; font-size:40px; width:100vw; margin-left:calc(-50vw + 600px); font-weight:bold; letter-spacing:-1px; text-align:center; height:200px;  background-size:3px, auto 200px; background-position:center center; background-repeat: repeat, no-repeat; padding-top:60px; margin-bottom:50px; }
+.SubArea>h2>span { display:block; font-size:20px; opacity:0.8; }
+.SubArea .SNB { width:210px; float:left; margin-right:40px; border-top:#036 solid 2px;}
+.SubArea .SNB a {display:block; min-height:50px; border-bottom:#cfd7dc solid 1px; font-size:18px; letter-spacing:-1px; padding:10px 10px 10px 20px;}
+.SubArea .SNB a:hover {background:#e3e9ee;}
+.SubArea .SNB .M_on a { border-bottom:none; background:#036 url("../images/sub/menu_this.png") no-repeat right 17px center; color:#fff;}
+.SubArea .SNB a:before { content: '· '; font-weight:bold; }
+.SubArea .Cont { width:950px; float:left; position:relative;}
+.SubArea .Cont h1 { font-size:24px; font-weight:bold; letter-spacing:-2px; color:#212121; padding-top:5px; margin-bottom:35px;}
+.SubArea .Cont .Path {position:absolute; right:0; top:5px;}
+.SubArea .Cont .Path a {display:inline-block; font-size:16px; padding:2px;  }
+.SubArea .Cont .Path span { display:inline-block; text-indent: -100px; overflow:hidden; width:1px; height:18px; background:#cfd7dc; transform: rotate(45deg); margin:0 10px; vertical-align: middle;}
+.SubArea .Cont .BtnPrint { margin-left:10px;}
+
+
+@media (max-width:1200px) {
+	.SubArea {margin-left:0; }
+	.SubArea h2 { margin-left:0; width:1200px; }
+}
+@media (min-width:1600px) {
+	.SubArea h2 {background-size:3px, 100% auto;}
+}

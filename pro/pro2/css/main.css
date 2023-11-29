@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 콘텐츠 디자인 */
+.visual{padding-top: 148px; position: relative; overflow: hidden; height:688px;}
+.visual .slidebox{ background: #f9f7f1; position: absolute; left:calc(50% - 960px)}
+.Visualbtn{width: 1200px; margin: 0 auto;  text-align: right; position: absolute; top:200px; right:calc((100% - 1200px)/2); } 
+.Visualbtn button{ background: #fff; width: 35px; height: 35px;box-shadow: 0px 0px 1px 2px #ece4cb;border-radius: 5px;}
+.Visualbtn button:hover{background:#fff1c8;  box-shadow: 0px 0px 1px 2px #ffe38d;}
+.visual .hidden{visibility: hidden; height: 0px; width: 0;}
+
+/* 공지사항 */
+.Notice{width: 100%;border-bottom: 2px solid #000;}
+.NoticeCont{width: 1200px; margin: 0 auto; line-height: 65px; }
+.Notice .NoticeCont .title{display:inline-block;vertical-align: middle; padding:0 18px; font-size :20px; color: #fff; background: #3366cc; border-radius:20px; line-height: 40px;}
+.Notice .NoticeCont .noticemore{    vertical-align: middle; color: #fff; background: url(../images/main/more01.png) no-repeat 67px center; padding: 0 20px;}
+.Notice .NoticeCont .notecetext{display: inline-block; font-size: 22px; color:#000; text-align: center; width: calc(100% - 235px);vertical-align: middle;} 
+.Notice .NoticeCont .Btngroup{width: 22px; float: right; padding-top: 15px;}
+.Notice .NoticeCont .Btngroup button{display: block;}
+
+/* 승인통계 */
+.Approved{width: 1200px; margin: 0 auto; padding: 30px 0; overflow: hidden;}
+.Approved h2{font-size: 20px; color: #000; display: inline-block;}
+.Approved .Subtext{font-size: 14px; color: #000;display: inline-block;padding-left: 10px; display: inline-block;}
+.Approved .ApprovedCont li{background: #eaf2f6; float: left; text-align: center; width: calc((100% - 100px)/5); margin-top: 20px; padding: 30px; box-sizing: border-box; margin-right: 25px;}
+.Approved .ApprovedCont li:last-child{margin-right: 0px;}
+.Approved .ApprovedCont .title{font-size:16px; color: #000; text-align: center; margin-top: 20px; font-weight: bold;}
+.Approved .ApprovedCont .text02{color: #717171; font-size: 12px; text-align: center; margin-top: 10px;}
+.Approved .ApprovedCont .go{border-radius: 20px; display: inline-block; line-height: 40px; text-align: center;  background: #fff; padding: 0px 45px; margin-top: 20px; font-weight: bold;box-shadow: 0px 0px 8px 0px #9f9f9f; }
+.Approved .ApprovedCont .go:hover {background: #3cb3ef; color: #fff; box-shadow: none;}
+
+/* 우리부 작성통계 */
+.Write{width: 100%; background: url(../images/main/backimg.png) no-repeat 0 0; overflow: hidden;background-size: cover; padding-bottom: 20px;}
+.Write .WriteCont {width: 1200px; margin: 0 auto; padding-top: 40px; display: block;}
+.Write h2{font-size: 20px; color: #fff; display: inline-block;font-weight: bold;text-shadow: 1px 2px 4px #097ea0;}
+.Write .Subtext{font-size: 14px; color: #fff;display: inline-block;padding-left: 10px; display: inline-block;text-shadow: 1px 2px 4px #097ea0;}
+.Write .WriteCont ul {padding-top: 40px;}
+.Write .WriteCont ul li{width: 20%; float: left; margin-bottom: 20px; }
+.Write .WriteCont ul li a{line-height: 50px;display: inline-block;}
+.Write .WriteCont ul li a img{background: #fff; border-radius: 50%; padding: 7px;  vertical-align: middle; }
+.Write .WriteCont ul li a span{color: #fff; font-weight: bold;text-shadow: 1px 2px 4px #097ea0; font-size: 15px; line-height: 22px; vertical-align: middle; width: 155px; display: inline-block; padding-left: 5px;}
+.Write .WriteCont ul li a span:hover{text-decoration: underline;}
+
+/* 최근통계자료 및 통계 간행물 */
+.Datacont{ width:1200px; margin: 0 auto; padding: 25px 0; overflow: hidden;}
+.Datacont h2{ font-size:20px; color:#333333; display: inline-block;}
+.Datacont .more{font-size: 14px; margin-top: 8px; color: #333; background: url(../images/main/more02.png) no-repeat right center; padding-right: 20px; float: right;}
+
+/* 최근통계자료 */
+.Datacont .leftcont{width: 400px; float: left;}
+.Datacont .leftcont ul{border-top: 2px solid #333; margin-top: 15px;}
+.Datacont .leftcont ul li{border-bottom: 1px solid #dedede;background: url(../images/main/file.png) no-repeat 0 center;}
+.Datacont .leftcont ul li:hover{background: #ecf1f3 url(../images/main/file.png) no-repeat 0 center;}
+.Datacont .leftcont ul li a{ color: #333; padding-left: 25px; display: block; padding: 10px 0px 10px 25px;}
+.Datacont .leftcont ul li a p{display: inline-block;font-size: 13px;}
+.Datacont .leftcont ul li a span{float: right;display: inline-block; color: #999999; font-weight: bold;font-size: 13px;}
+
+/* 통계간행물 */
+.Datacont .Rightcont{width:calc(100% - 450px); box-sizing: border-box; float: right; position: relative;}
+.Datacont .Rightcont ul{border-top: 2px solid #333;overflow: hidden; margin-top: 15px; padding: 20px 34px; background: #f4f4f4; border: 1px solid #dedede; overflow: hidden; height: 170px;}
+.Datacont .Rightcont ul li{float: left;width: calc((100% - 80px)/5); margin-right: 20px; position: relative;}
+.Datacont .Rightcont ul li .Book_on{background: #fff; opacity: 0.9;  border: 5px solid #4775d1;height: 175px; position: absolute; top:0; font-size: 16px; font-weight: bold; color: #333; text-align: center; padding-top: 20px; box-sizing: border-box; display: none;}
+.Datacont .Rightcont ul li:hover .Book_on{display: block; height: 130px; font-size: 14px;}
+.Datacont .Rightcont ul li a img{ width:100%; height: 130px; box-shadow: 0px 0px 4px 1px #ddd; }
+.Datacont .Rightcont ul li:nth-child(5n){ margin-right: 0px;}
+.Datacont .Rightcont .Btnleft{position: absolute; top :110px; background: #fff; padding:15px 6px; border:1px solid #ddd }
+.Datacont .Rightcont .Btnright{position: absolute; top :110px ;right:0; background: #fff; padding:15px 6px; border:1px solid #ddd}
+.Datacont .Rightcont .Btnleft:hover{background: #f1f1f1;}
+.Datacont .Rightcont .Btnright:hover{background: #f1f1f1;}
+
+/* 배너 */
+.Banner .Bannertitle{width: 1200px; margin: 0 auto; padding-bottom: 20px;}
+.Banner h2{font-size:22px; color:#333333; display: inline-block; margin-right: 25px;}
+.Banner .Btngroup{display: inline-block; vertical-align: super;}
+.Banner .Btngroup button {border: 1px solid #ddd; padding: 3px 8px; margin-left: -6px;}
+.Banner .Btngroup .Btnplay{background: url(../images/main/play02.png) no-repeat center; text-indent: -9999px; width: 25px;}
+.Banner .Btngroup .Btnplay:hover{background:#f1f1f1 url(../images/main/play02.png) no-repeat center;}
+.Banner .Btngroup .Btnstop{background: url(../images/main/stop02.png) no-repeat center;text-indent: -9999px;width: 25px;}
+.Banner .Btngroup .Btnstop:hover {background: #f1f1f1 url(../images/main/stop02.png) no-repeat center;}
+.Banner .Btngroup .Btnunfold:hover{background: #f1f1f1;}
+.Banner .Bannerback{background: #f4f4f4; padding: 20px 0; overflow: hidden;}
+.Banner .Bannerback ul {width: 1200px; margin: 0 auto; overflow: hidden; height:65px;}
+.Banner .Bannerback ul li{float: left; width: calc((100% - 80px)/5); margin-right: 20px; border: 1px solid #dddddd;}
+.Banner .Bannerback ul li:hover{border: 1px solid #4775d1;}
+.Banner .Bannerback ul li:nth-child(5n){margin-right: 0px;}

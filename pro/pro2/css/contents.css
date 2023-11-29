@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* 콘텐츠 디자인 */
+
+/* 지표서비스 */
+.Tabstyle01{width: 100%; overflow: hidden; margin-bottom: 40px;}
+.Tabstyle01 li{float: left; width: 50%; text-align: center; border-bottom: 1px solid #dcdcdc; box-sizing: border-box;height:50px;  }
+.Tabstyle01 li a{color:#484848;font-size: 18px; width: 100%; display: inline-block;line-height: 50px;}
+.Tabstyle01 .T_on{border-top: 4px solid #003265; border-bottom: none; border-left: 1px solid #dcdcdc;border-right: 1px solid #dcdcdc; }
+.Tabstyle01 .T_on a{font-size: 20px; font-weight: bold; color:#003265;}
+.Tabstyle01 li:first-child a{background: url(../images/sub/tab_01.png) no-repeat 184px center;}
+.Tabstyle01 li:nth-child(2) a{background: url(../images/sub/tab_02.png) no-repeat 184px center;}
+.Tabstyle01 li:first-child.T_on a{background: url(../images/sub/tab_01_on.png) no-repeat 184px center;}
+.Tabstyle01 li:nth-child(2).T_on a{background: url(../images/sub/tab_02_on.png) no-repeat 184px center;}
+.BoxCont{overflow: hidden;}
+.Box{width:calc((100% - 45px)/4); height: 150px; padding: 20px; box-sizing: border-box;  float: left;margin-right: 15px; margin-bottom: 15px;}
+.Box:nth-child(4n){margin-right: 0px;}
+.Box.Level01{
+    background: #347ec9; /* Old browsers */
+    background: linear-gradient(135deg, #347ec9 0%,#114c9e 100%); }/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.Box.Level01 p{font-size: 20px; color: #fff; font-weight: bold; margin-bottom: 20px;}
+.Box.Level01 dl dt{width: 40%; border-radius: 15px; background: #6699cc; padding:4px 10px; color: #fff; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 5px; text-align: center;}
+.Box.Level01 dl dd{width: 60%; display: inline-block;text-align: right; font-size: 16px; color: #fff; font-weight: bold; float: right;}
+.Box.Level01 dl dd span{font-size: 16px; color: #fff; font-weight: bold;}
+.Box.Level02{border:1px solid #97b0d1;
+    background: #b2d2f3; /* Old browsers */
+    background: linear-gradient(45deg, #b2d2f3 0%,#d7edfa 100%);} /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.Box.Level02 p{font-size: 20px; color: #11386b; font-weight: bold; margin-bottom: 20px;}
+.Box.Level02 dl dt{width: 40%; border-radius: 15px; background: #6699cc; padding:4px 10px; color: #fff; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 5px;text-align: center;}
+.Box.Level02 dl dd{width: 60%; display: inline-block ;text-align: right; font-size: 16px; color: #333; font-weight: bold; float: right;}
+.Box.Level02 dl dd span{font-size: 16px; color: #333; font-weight: bold;}
+.Box.Level03{background: #fff; border:1px solid #ddd;}
+.Box.Level03 p{font-size: 20px; color: #333; font-weight: bold; margin-bottom: 20px;}
+.Box.Level03 dl dt{width: 40%; border-radius: 15px; background: #6699cc; padding:4px 10px; color: #fff; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 5px;text-align: center;}
+.Box.Level03 dl dd{width: 60%; display: inline-block;text-align: right; font-size: 16px; color: #333; font-weight: bold; float: right;}
+.Box.Level03 dl dd span{font-size: 16px; color: #333; font-weight: bold;}
+
+
+/* 주제별 통계 */
+.Themebox{width:160px; float: left;}
+.Themebox li {padding-right: 10px;}
+.Themebox li a{border:1px solid #ddd; margin-top: -1px; color:#686868; font-size: 16px;line-height: 58px;padding-left: 20px; width: 100%; display: block;}
+.Themebox li a:hover{background: #f1f1f1;}
+.Themebox .Theme_on{background: url(../images/sub/theme_arrow.png) no-repeat 153px center;}
+.Themebox .Theme_on a{color:#fff; font-weight: bold;border:1px solid #3377cc; background:#3377cc!important;} 
+
+.Treebox{width:calc(100% - 148px);height: 532px; border: 3px solid #3377cc; margin-left:150px;margin-top: -1px; box-sizing: border-box; padding: 20px; overflow-y: auto; position: absolute;}
+
+/* 참고사이트 */
+.Sitebox {width:calc((100% - 52px)/3); text-align: center; box-sizing: border-box; float: left; border:1px solid #ddd; padding:20px; margin:0 25px 25px 0;}
+.Sitebox:nth-child(3n){margin-right: 0px;}
+.Sitebox img{display: inline-block; margin: 0 auto; padding-bottom: 10px; text-align: center;}
+.Sitebox p{font-size: 20px;color:#454647; margin-bottom: 10px; font-weight: bold; text-align: center;}
+.Sitebox span{ font-size: 14px; color: #626262; line-height: 20px;  text-align: left;}
+.Sitebox a{display: block; text-indent:-20px; width: 100%; line-height:40px; background: #3e475a url(../images/sub/newwindow.png) no-repeat 175px center; color: #fff; margin-top: 30px;}
+.Sitebox a:hover{width: 100%; line-height:40px; background: #102e6d  url(../images/sub/newwindow.png) no-repeat 175px center; color: #fff;}
+
+/* e나라지표 */
+.Naracont{border-top: 3px solid #333; width: 100%;}
+.Naracont .Narabox{ padding: 25px 20px 25px 90px; border-bottom: 1px solid #d4d4de; background: url(../images/sub/eicon.png) no-repeat 22px center; overflow: hidden;} 
+.Naracont .Narabox dl{float: left;}
+.Naracont .Narabox dl dt{ color: #333; font-size: 18px; font-weight: bold; }
+.Naracont .Narabox dl dd{color:#626262; font-size: 15px;}
+.Naracont .Narabox  a{display: inline-block; text-indent:-20px;  background: url(../images/sub/newwindow02.png) no-repeat 135px center; color: #272727;float: right; padding: 10px 50px; border: 1px solid #ddd; margin-top: 3px;}
+.Naracont .Narabox  a:hover{border:1px solid #3377cc; color:#0a58a7; font-weight: bold;}
+
+/* 통계간행물 */
+.Bookcon{overflow: hidden;}
+.Bookcon li{width:calc((100% - 45px)/4); background: #f1f6fb; height: 325px; padding: 20px; box-sizing: border-box;  float: left;margin-right: 15px; margin-bottom: 15px; text-align: center;}
+.Bookcon li:nth-child(4n){margin-right: 0px;}
+.Bookcon li p {font-size: 16px; color:#4b4b4b; text-align: center; font-weight: bold;height: 55px;line-height: 21px;}
+.Bookcon li img{border: 1px solid #cbcbcb;} 
+.Bookcon li button{width: 155px; line-height: 40px; text-indent: -20px; background: #424b53 url(../images/sub/download.png) no-repeat 102px center; color: #fff; margin-top: 15px;}
+.Bookcon li button:hover{background:#01549e url(../images/sub/download.png) no-repeat 102px center;;  } 
+
+.Page {padding-top:50px; text-align:center;}
+.Page button { border:#ddd solid 1px; height:30px; width:35px;}
+.Page a {display:inline-block; font-size:18px; padding:0 5px; margin:0 5px;}
+.Page a:first-of-type {margin-left:30px;}
+.Page a:last-of-type {margin-right:30px;}
+.Page a:hover { color:#000;}
+.Page a.M_on {color:#000; border-bottom:#0f9f16 solid 2px; font-weight:bold;}
+
+/* 농식품 통계상식 */
+.Sensecont{border-top: 1px solid #004283;}
+.Sensecont .Sensebox {line-height: 80px; border-bottom: 1px solid #e0e0e0;}
+.Sensecont .Sensebox .Sensetitle{background: url(../images/sub/question.png) no-repeat 20px center;  height: 35px;text-indent: 60px;font-size: 20px; color:#1a1a1a; font-weight: bold; display: inline-block; width: 65%;}
+.Sensecont .Sensebox button{display: inline-block;line-height: 22px; color: #fff;font-size: 15px;padding: 8px 32px;background: #5b6065 url(../images/sub/toparrow.png) no-repeat 152px center;border-radius: 5px;text-indent: -10px;}
+.Sensecont .Sensebox button:hover{background: #0c7acf url(../images/sub/toparrow.png) no-repeat 152px center;}
+.Sensecont .Sensebox a{display: inline-block;color: #fff;font-size: 15px;padding: 8px 34px;background: #5b6065 url(../images/sub/newwindow.png) no-repeat 105px center;border-radius: 5px;text-indent: -15px;}
+.Sensecont .Sensebox a:hover{background: #0c7acf url(../images/sub/newwindow.png) no-repeat 105px center;}
+.Sensecont .Sensebox button.S_on{background: #0c7acf url(../images/sub/bottomaroow.png) no-repeat 152px center;}
+.Sensecont .Sensebox .Answerbox{background: #f9f9f9 url(../images/sub/answer.png)no-repeat 20px 15px; border-top: 1px solid #e0e0e0; box-sizing: border-box; padding: 0px 20px 20px 63px;}
+.Sensecont .Sensebox .Answerbox .Answertitle{ font-size:18px; color:#1a1a1a; font-weight: bold; margin-bottom: 5px; margin-top: 20px;}
+
+.subtable{ width: 100%;border-collapse:collapse;}
+
+.subtable thead tr th{border: 1px solid #b2b8c0; font-size:14px; font-weight: bold; text-align: center; background:#eff5fa; color: #181818;  line-height: 18px; padding:5px 0;}
+.subtable tbody tr th{border: 1px solid #b2b8c0; font-size:14px; text-align: center; background:#eff5fa; color: #181818;  line-height: 18px; padding:5px 0;}
+.subtable tbody tr td{border: 1px solid #b2b8c0; font-size: 14px;color: #181818; background: #fff; padding: 5px;}
+
+.subtable.basic thead tr th{border-top: 1px solid #004283;}
+.subtable.basic tbody tr th{border-top: none;}
+.subtable.basic tr td{border-top: none;}
+
+.subtable.horizontal tbody tr:first-child th{border-top: 1px solid #004283;}
+.subtable.horizontal tbody tr th{border-top: 1px solid #004283; font-weight: bold;}
+.subtable.horizontal tbody tr:first-child td{border-top: 1px solid #004283;}
+
+.subtable.Vertical thead tr th{border-top: 1px solid #004283; font-weight: bold; }
+.subtable.Vertical thead tr td{border-top: 1px solid #004283; font-weight: bold; }
+.subtable.Vertical tbody tr th{border-top: none;}
+.subtable.Vertical tbody tr td{border-top: none;}
+
+.Answerbox .textstyle01 li{ background: url(../images/sub/bullet.png) no-repeat 0 center; padding-left: 8px; color: #1a1a1a; font-size: 15px; }
+.Answerbox .textstyle02 dt{background: url(../images/sub/bullet.png) no-repeat 0 center; text-indent: 8px; color: #1a1a1a; font-size: 15px; margin: 10px 0 5px; }
+.Answerbox .textstyle02 dd::before{content: '-'; }
+.Answerbox .textstyle02 dd{padding-left:10px; font-size: 14px; color:#565656; line-height: 22px;}
+
+/* 용어설명 */
+.SearchText { background:#f9f9f9; border:#e1e1e1 solid 1px; border-bottom:none; padding:20px 108px 0px 95px; position:relative;}
+.SearchText legend {position:absolute; left:20px; top:24px; font-size:16px; color:#333; font-weight:bold;}
+.SearchText button { position:absolute; right:20px; top:20px;line-height:35px; height:35px; width:80px; background:#333; color:#fff; font-weight:bold;}
+.SearchText input {width:100%; background:#fff; border:#ddd solid 1px; line-height:33px; height:33px;}
+.SearchWord { background:#f9f9f9; border:#e1e1e1 solid 1px; border-top:none; margin-bottom:25px; padding:20px 99px 20px 95px; position:relative; overflow:auto;}
+.SearchWord legend {position:absolute; left:20px; top:20px; font-size:16px; color:#333; font-weight:bold;}
+.SearchWord button { position:absolute; right:20px; top:20px;line-height:65px; height:65px; width:80px; background:#333; color:#fff; font-weight:bold;}
+.SearchWord span {display:block; float:left; margin-right:9px; margin-left:1px; }
+.SearchWord span.Group1 { width:68px; } 
+.SearchWord span.Group1 label { width:100% !important;}
+.SearchWord span.Group2 { width:239px; } 
+.SearchWord span.Group2 label { width:35px !important;}
+.SearchWord span.Group3 { width:417px; } 
+.SearchWord input[type="radio"] { display:none;}
+.SearchWord input[type="radio"] + label { display:inline-block; border:#ddd solid 1px; background:#fff;  float:left; text-align:center; font-size:16px; width:33px; height:33px; line-height:31px; margin-left:-1px; margin-top:-1px;  }
+.SearchWord input[type="radio"]:checked + label { border:#0d5fb1 solid 1px; background:#0d5fb1; color:#fff; position:relative;}
+
+/* Tab */
+.Tabstyle {width: 100%; margin-bottom: 40px; display:table; table-layout: fixed;}
+.Tabstyle li { text-align: center; border-bottom: 1px solid #dcdcdc; height:50px; display:table-cell; vertical-align: middle; }
+.Tabstyle li a { color:#484848; font-size: 16px; width: 100%; display:block;}
+.Tabstyle .T_on {border-top: 4px solid #003265; border-bottom: none; border-left: 1px solid #dcdcdc;border-right: 1px solid #dcdcdc; }
+.Tabstyle .T_on a {font-size: 18px; font-weight: bold; color:#003265;}
+
+/* 통계지도 */
+.SetData { position: absolute; right: 0; z-index: 10;}
+.SetData select {float:left; height:30px; border:#ddd solid 1px; min-width:120px; border-right:none;}
+.SetData button {height:30px; background:#333; color:#fff; padding:0 10px;}
+.StatesMap {position:relative; padding-top:50px;}
+.StatesMap h2 {font-size:20px; font-weight:bold; color:#333; position:absolute; left:0; top:0;}
+.StatesMap .MapArea { width:700px; height:850px;  float:left; }
+.Go_Report {display:inline-block; height:30px; background:#333; color:#fff; text-align:center; line-height:30px; padding:0 20px; border-radius:20px; position:absolute; left:0; top:50px;}
+.StatesMap .TableArea {width:calc(100% - 700px); position:absolute; right:0; top:50px; height:850px;  }
+.StatesMap .TableArea table {width:100%; border-collapse: collapse;}
+.StatesMap .TableArea table th { text-align:left; padding:10px; border:#ddd solid 1px; background:#f4f4f4; }
+.StatesMap .TableArea table td { text-align:right; padding:10px; border:#ddd solid 1px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

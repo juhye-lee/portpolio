@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* 게시판모음 */
+
+/* 목록 */
+.BoardList { position:relative;}
+.BoardList .ListCount { font-size:14px; line-height:35px; margin-bottom:15px; display:block;}
+.BoardList .ListCount strong {color:#000; margin-right:13px;}
+.BoardList .ListSearch {position:absolute; right:0; top:0;}
+.BoardList select, .BoardList input {height:35px; border:#ddd solid 1px; vertical-align: middle;}
+.BoardList select {margin-right:-6px;}
+.BoardList input {width:150px;}
+.BtnDate {border:#ddd solid 1px; width:35px; height:35px; margin-left:-1px; background:#fff;}
+.BoardList .ListSearch .BtnListSearch { background:#333; height:35px; color:#fff; font-weight:bold; padding:0 10px;}
+.BoardList .ListSearch .BtnListSearch img { margin-right:3px; margin-top:-3px;}
+.BoardList table {width:100%; border-collapse: collapse; font-size:14px; }
+.BoardList table caption {font-size:0; width:0; height:0;}
+.BoardList table thead th {line-height:50px; border-bottom:#d4d4de solid 2px; border-top:#333 solid 3px; position:relative; font-weight:bold;}
+.BoardList table thead th:before { content:''; width:1px; height:15px; background:#d4d4de; position:absolute; right:0; bottom:0; }
+.BoardList table thead th:last-child:before { width:0; height:0; }
+.BoardList table tbody th, .BoardList table tbody td { padding:13px 0; border-bottom:#d4d4de solid 1px; text-align:center; }
+.BoardList table tbody td.Title {text-align:left;}
+.BoardList table tbody tr.TopNotice { background:#f4f4f4;}
+.BoardList table tbody tr.TopNotice th, .BoardList table tbody tr.TopNotice td {  padding:10px 0;}
+.BoardList table tbody tr:hover th, .BoardList table tbody tr:hover td { background:#f4f4f4;}
+.BoardList .Page {padding-top:50px; text-align:center;}
+.BoardList .Page button { border:#ddd solid 1px; height:30px; width:35px;}
+.BoardList .Page a {display:inline-block; font-size:18px; padding:0 5px; margin:0 5px;}
+.BoardList .Page a:first-of-type {margin-left:30px;}
+.BoardList .Page a:last-of-type {margin-right:30px;}
+.BoardList .Page a:hover { color:#000;}
+.BoardList .Page a.M_on {color:#000; border-bottom:#0f9f16 solid 2px; font-weight:bold;}
+
+/* 상세보기 */
+.BoardDetail { position:relative;}
+.BoardDetail input {height:35px; border:#ddd solid 1px; vertical-align: middle;}
+.BoardDetail table {width:100%; border-collapse: collapse;  margin-bottom:30px; }
+.BoardDetail table caption {font-size:0; width:0; height:0;}
+.BoardDetail table th  {line-height:50px; border-bottom:#d4d4de solid 1px; border-top:#d4d4de solid 1px; position:relative; font-weight:bold; width:150px;}
+.BoardDetail table th:before {content:''; display:block; width:1px; height:15px; background:#d4d4de; position:absolute; left:0; bottom:0;}
+.BoardDetail table th:first-child:before { width:0;}
+.BoardDetail table th:after {content:''; display:block; width:1px; height:15px; background:#d4d4de; position:absolute; right:0; bottom:0;}
+.BoardDetail td { padding:13px 20px; border-bottom:#d4d4de solid 1px;}
+.BoardDetail table tr:first-child th, .BoardDetail table tr:first-child td {border-top:#333 solid 3px;} 
+.BoardDetail td pre { padding:30px; word-wrap: break-word; white-space: pre-wrap; word-break: break-all; line-height:20px;font-size:16px;}
+.BoardDetail td.Title { font-weight:bold;font-size:16px;}
+.BoardDetail td.Comment {font-size:16px;}
+
+.BtnGroup { display:block; overflow:auto;}
+.BtnGroup .BtnLeftArea { float:left;}
+.BtnGroup .BtnRightArea { float:right;}
+.BtnGroup button {line-height:35px; font-size:16px; padding:0 15px;  }
+.BtnGroup button img { position:relative; vertical-align:middle; margin-right:8px;}
+.BtnGroup .BtnLeftArea button img { margin-top:-1px;}
+.BtnGroup .BtnLeftArea button { background:#fff; border:#ddd solid 1px; }
+.BtnGroup .BtnRightArea button {background:#036; border:none; color:#fff;}
